@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Жизнь">
+<meta name="theme-color" content="#534ab7">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<title>Жизнь</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+  :root {
+    --bg:#f7f7f9;--card:#fff;--border:#e8e8f0;--border-light:#f0f0f5;
+    --text:#1a1a2e;--text-muted:#999;--text-hint:#bbb;
+    --accent:#534ab7;--accent-light:#eeedfe;--accent-mid:#afa9ec;
+    --green:#1d9e75;--green-light:#e1f5ee;
+    --amber:#ef9f27;--amber-light:#faeeda;--amber-dark:#854f0b;
+    --pink:#d4537e;--pink-light:#fbeaf0;--pink-dark:#993556;
+    --orange:#d85a30;--safe-bottom:env(safe-area-inset-bottom,0px);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html,body{height:100%;overflow:hidden;background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--text)}
+  .screen{display:none;flex-direction:column;height:100%;overflow:hidden}
+  .screen.active{display:flex}
+  .scroll-area{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px}
+  .scroll-area::-webkit-scrollbar{display:none}
+  .status-bar{display:flex;justify-content:space-between;padding:12px 20px 4px;font-size:11px;color:var(--text-hint);flex-shrink:0}
+  .topbar{padding:2px 16px 12px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
+  .page-title{font-size:22px;font-weight:600;color:var(--text)}
+  .page-sub{font-size:12px;color:var(--text-muted);margin-top:1px}
+  .avatar{width:36px;height:36px;border-radius:50%;background:var(--accent-light);border:1.5px solid var(--accent-mid);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:var(--accent)}
+  .nav{display:flex;justify-content:space-around;align-items:center;padding:8px 4px calc(8px + var(--safe-bottom));border-top:.5px solid var(--border);background:var(--card);flex-shrink:0}
+  .nav-item{display:flex;flex-direction:column;align-items:center;gap:3px;padding:4px 8px;cursor:pointer;min-width:52px}
+  .nav-item i{font-size:22px;color:#ccc;transition:color .15s}
+  .nav-item span{font-size:10px;color:#ccc;transition:color .15s}
+  .nav-item.active i,.nav-item.active span{color:var(--accent)}
+  .nav-item.center .icon-wrap{width:38px;height:38px;border-radius:11px;background:var(--accent-light);border:.5px solid var(--accent-mid);display:flex;align-items:center;justify-content:center;margin-top:-10px}
+  .nav-item.center i{font-size:20px;color:var(--accent)}
+  .nav-item.center.active .icon-wrap{background:var(--accent);border-color:#3c3489}
+  .nav-item.center.active i{color:#fff}
+  .nav-item.center span{font-size:10px;color:#aaa;margin-top:2px}
+  .nav-item.center.active span{color:var(--accent)}
+  .section{padding:0 16px;margin-bottom:12px}
+  .section-title{font-size:11px;color:var(--text-muted);letter-spacing:.05em;text-transform:uppercase;margin-bottom:8px}
+  .card{background:var(--card);border-radius:14px;border:.5px solid var(--border);overflow:hidden}
+  .divider{height:.5px;background:var(--border-light);margin:0 16px 12px}
+  .focus-card{background:var(--card);border-radius:14px;border:.5px solid var(--border);padding:12px 14px}
+  .focus-label{font-size:11px;color:var(--text-muted);margin-bottom:4px}
+  .focus-value{font-size:14px;font-weight:500;color:var(--text)}
+  .task-item{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--card);border-radius:12px;border:.5px solid var(--border);margin-bottom:6px;cursor:pointer;transition:opacity .15s}
+  .task-item:active{opacity:.7}
+  .checkbox{width:20px;height:20px;border-radius:6px;border:1.5px solid #d0d0e0;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .15s}
+  .checkbox.checked{background:var(--accent-light);border-color:var(--accent-mid)}
+  .checkbox.checked i{font-size:11px;color:var(--accent)}
+  .task-text{font-size:13px;color:var(--text);flex:1;transition:all .15s}
+  .task-text.done{color:var(--text-hint);text-decoration:line-through}
+  .task-tag{font-size:10px;padding:2px 8px;border-radius:10px;background:var(--accent-light);color:var(--accent);flex-shrink:0}
+  .habit-chip{display:flex;align-items:center;gap:5px;padding:7px 12px;border-radius:20px;background:var(--card);border:.5px solid var(--border);font-size:12px;color:#888;cursor:pointer;transition:all .15s}
+  .habit-chip i{font-size:15px}
+  .habit-chip.done{background:var(--green-light);border-color:#9fe1cb;color:#0f6e56}
+  .habit-row{display:flex;gap:8px;flex-wrap:wrap}
+  /* HABIT TABLE */
+  .habit-table-wrap{padding:0 16px;margin-bottom:12px}
+  .habit-table{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;border:.5px solid var(--border)}
+  .habit-table th{font-size:10px;color:var(--text-muted);font-weight:500;padding:8px 4px;text-align:center;border-bottom:.5px solid var(--border-light);background:var(--card)}
+  .habit-table th.habit-name-col{text-align:left;padding-left:12px;width:30%}
+  .habit-table td{padding:8px 4px;text-align:center;border-bottom:.5px solid var(--border-light)}
+  .habit-table td.habit-name-cell{text-align:left;padding-left:12px;font-size:12px;color:var(--text);font-weight:500}
+  .habit-table tr:last-child td{border-bottom:none}
+  .habit-table tr:last-child.add-row td{border-top:.5px dashed #d0d0e0;border-bottom:none}
+  .hcb{width:20px;height:20px;border-radius:5px;border:1.5px solid #d0d0e0;margin:0 auto;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .15s;flex-shrink:0}
+  .hcb.on{background:var(--accent);border-color:var(--accent)}
+  .hcb.on::after{content:'✓';font-size:11px;color:#fff;font-weight:700}
+  .hcb.today-col{border-color:var(--accent-mid)}
+  .habit-del-btn{font-size:14px;color:#ddd;cursor:pointer;padding:0 2px}
+  .add-habit-row{cursor:pointer}
+  .add-habit-row td{color:var(--text-hint);font-size:12px;padding:10px 12px;text-align:left}
+  .today-header{color:var(--accent)!important;font-weight:700!important}
+  .tabs-bar{display:flex;gap:6px;padding:0 16px;margin-bottom:14px;overflow-x:auto;scrollbar-width:none;flex-shrink:0}
+  .tabs-bar::-webkit-scrollbar{display:none}
+  .tab-btn{display:flex;align-items:center;gap:5px;padding:7px 14px;border-radius:20px;font-size:12px;color:var(--text-muted);white-space:nowrap;cursor:pointer;border:.5px solid transparent;transition:all .15s;background:transparent}
+  .tab-btn i{font-size:14px}
+  .tab-btn.active{background:var(--card);border-color:var(--border);color:var(--text);font-weight:500}
+  .tab-btn.active i{color:var(--accent)}
+  .goal-card{background:var(--card);border-radius:14px;border:.5px solid var(--border);padding:14px;margin-bottom:8px;cursor:pointer;transition:opacity .15s}
+  .goal-card:active{opacity:.7}
+  .gc-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px}
+  .gc-name{font-size:14px;font-weight:500;color:var(--text);flex:1;padding-right:8px}
+  .gc-badge{font-size:10px;padding:3px 9px;border-radius:10px;white-space:nowrap;flex-shrink:0}
+  .badge-active{background:var(--green-light);color:#0f6e56}
+  .badge-locked{background:var(--border-light);color:var(--text-hint)}
+  .gc-desc{font-size:12px;color:var(--text-muted);margin-bottom:10px;line-height:1.5}
+  .progress-track{height:5px;background:var(--border-light);border-radius:3px;overflow:hidden;margin-bottom:7px}
+  .progress-fill{height:100%;border-radius:3px;transition:width .3s}
+  .gc-foot{display:flex;justify-content:space-between;align-items:center}
+  .gc-pct{font-size:12px;font-weight:500}
+  .gc-steps{font-size:11px;color:var(--text-hint)}
+  .add-goal-btn{display:flex;align-items:center;justify-content:center;gap:6px;padding:13px;background:var(--card);border-radius:14px;border:.5px dashed #d0d0e0;font-size:13px;color:var(--text-hint);cursor:pointer;margin-bottom:8px}
+  .add-goal-btn i{font-size:16px}
+  .stats-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:0 16px;margin-bottom:12px}
+  .stat-card{background:var(--card);border-radius:12px;border:.5px solid var(--border);padding:12px}
+  .stat-icon{font-size:18px;margin-bottom:5px}
+  .stat-label{font-size:11px;color:var(--text-muted);margin-bottom:3px}
+  .stat-value{font-size:20px;font-weight:600;color:var(--text)}
+  .stat-sub{font-size:11px;color:var(--text-hint);margin-top:2px}
+  .dash-goal{background:var(--card);border-radius:12px;border:.5px solid var(--border);padding:11px 13px;margin-bottom:6px}
+  .dash-goal-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+  .dash-goal-name{font-size:13px;color:var(--text)}
+  .quest-dash{display:flex;align-items:center;gap:10px;background:var(--card);border:.5px solid var(--border);border-radius:12px;padding:10px 13px;margin-bottom:6px}
+  .qdot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+  .quest-name{font-size:13px;color:var(--text);flex:1}
+  .quest-sub{font-size:11px;color:var(--text-hint)}
+  .quest-card{background:var(--card);border-radius:14px;border:.5px solid var(--border);overflow:hidden;margin-bottom:10px}
+  .quest-head{display:flex;align-items:center;gap:10px;padding:11px 13px;border-bottom:.5px solid var(--border-light)}
+  .q-cat-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+  .q-goal-name{font-size:12px;color:var(--text-muted);flex:1}
+  .q-badge{font-size:10px;padding:2px 8px;border-radius:10px}
+  .step-row{display:flex;align-items:flex-start;gap:10px;padding:10px 13px;border-bottom:.5px solid var(--border-light)}
+  .step-row:last-child{border-bottom:none}
+  .step-line{display:flex;flex-direction:column;align-items:center;flex-shrink:0}
+  .step-dot{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+  .step-dot i{font-size:10px}
+  .step-connector{width:1.5px;height:18px;background:var(--border-light);margin:2px 0}
+  .step-body{flex:1;min-width:0}
+  .step-name{font-size:13px;color:var(--text);margin-bottom:2px}
+  .step-name.done{color:var(--text-hint);text-decoration:line-through}
+  .step-name.locked{color:#ccc}
+  .step-hint{font-size:11px;color:var(--text-hint)}
+  .step-hint.active{color:var(--accent)}
+  .step-action{display:inline-flex;align-items:center;gap:4px;margin-top:6px;font-size:11px;padding:4px 10px;border-radius:20px;background:var(--accent-light);color:var(--accent);cursor:pointer}
+  .step-action i{font-size:12px}
+  .period-tabs{display:flex;gap:6px;padding:0 16px;margin-bottom:14px;flex-shrink:0}
+  .period-tab{padding:6px 14px;border-radius:20px;font-size:12px;color:var(--text-muted);cursor:pointer;border:.5px solid transparent;transition:all .15s}
+  .period-tab.active{background:var(--card);border-color:var(--border);color:var(--text);font-weight:500}
+  .bar-chart{display:flex;align-items:flex-end;gap:5px;height:80px;padding:0 2px}
+  .bar-col{display:flex;flex-direction:column;align-items:center;gap:4px;flex:1}
+  .bar{width:100%;border-radius:5px 5px 0 0}
+  .bar-lbl{font-size:10px;color:var(--text-hint)}
+  .habit-grid-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .habit-grid-row:last-child{margin-bottom:0}
+  .hg-label{font-size:11px;color:var(--text-muted);width:62px;flex-shrink:0}
+  .hg-dots{display:flex;gap:4px;flex:1}
+  .hg-dot{width:16px;height:16px;border-radius:4px}
+  .hg-dot.on{background:var(--accent)}
+  .hg-dot.off{background:var(--border-light)}
+  .hg-dot.today{background:var(--accent-light);border:1.5px solid var(--accent-mid)}
+  .streak-card{margin:0 16px 12px;background:var(--card);border-radius:14px;border:.5px solid var(--border);padding:14px 16px;display:flex;align-items:center;gap:14px}
+  .streak-fire{font-size:32px;color:var(--orange)}
+  .streak-number{font-size:38px;font-weight:600;color:var(--text);line-height:1}
+  .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:100;align-items:flex-end}
+  .modal-overlay.open{display:flex}
+  .modal-sheet{background:var(--card);border-radius:20px 20px 0 0;padding:20px 20px calc(20px + var(--safe-bottom));width:100%}
+  .modal-title{font-size:17px;font-weight:600;margin-bottom:16px}
+  .modal-input{width:100%;padding:12px 14px;border-radius:12px;border:.5px solid var(--border);background:var(--bg);font-size:14px;color:var(--text);outline:none;margin-bottom:10px;font-family:inherit}
+  .modal-input:focus{border-color:var(--accent-mid)}
+  .modal-select{width:100%;padding:12px 14px;border-radius:12px;border:.5px solid var(--border);background:var(--bg);font-size:14px;color:var(--text);outline:none;margin-bottom:16px;font-family:inherit}
+  .modal-row{display:flex;gap:10px}
+  .btn-cancel{flex:1;padding:13px;border-radius:12px;border:.5px solid var(--border);background:var(--bg);font-size:14px;color:var(--text-muted);cursor:pointer;font-family:inherit}
+  .btn-save{flex:2;padding:13px;border-radius:12px;border:none;background:var(--accent);font-size:14px;color:#fff;font-weight:500;cursor:pointer;font-family:inherit}
+  .fin-tabs{display:flex;gap:0;margin:0 16px 14px;background:var(--card);border-radius:14px;border:.5px solid var(--border);overflow:hidden;flex-shrink:0}
+  .fin-tab{flex:1;padding:11px 0;text-align:center;font-size:13px;color:var(--text-muted);cursor:pointer;transition:all .15s;border-bottom:2.5px solid transparent}
+  .fin-tab.active{color:var(--accent);font-weight:600;border-bottom:2.5px solid var(--accent)}
+  .fin-summary{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:0 16px;margin-bottom:14px}
+  .fin-sum-card{background:var(--card);border-radius:14px;border:.5px solid var(--border);padding:14px}
+  .fin-sum-label{font-size:11px;color:var(--text-muted);margin-bottom:4px}
+  .fin-sum-val{font-size:20px;font-weight:700;color:var(--text);line-height:1.2}
+  .fin-sum-sub{font-size:10px;color:var(--text-hint);margin-top:3px}
+  .income-item{display:flex;align-items:center;gap:10px;background:var(--card);border-radius:12px;border:.5px solid var(--border);padding:12px 14px;margin-bottom:6px}
+  .income-icon{width:36px;height:36px;border-radius:10px;background:var(--green-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;color:var(--green)}
+  .income-body{flex:1;min-width:0}
+  .income-title{font-size:13px;font-weight:500;color:var(--text);margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .income-meta{font-size:11px;color:var(--text-muted)}
+  .income-amount{font-size:14px;font-weight:700;color:var(--green);flex-shrink:0}
+  .income-del{font-size:20px;color:#ddd;cursor:pointer;padding:2px 4px;flex-shrink:0;line-height:1}
+  .debt-item{background:var(--card);border-radius:14px;border:.5px solid var(--border);padding:14px;margin-bottom:8px}
+  .debt-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px}
+  .debt-left{flex:1;padding-right:8px}
+  .debt-name{font-size:14px;font-weight:500;color:var(--text);margin-bottom:2px}
+  .debt-meta{font-size:11px;color:var(--text-muted)}
+  .debt-right{text-align:right;flex-shrink:0}
+  .debt-total{font-size:16px;font-weight:700;color:var(--pink)}
+  .debt-remain{font-size:10px;color:var(--text-hint);margin-top:2px}
+  .debt-track{height:5px;background:var(--border-light);border-radius:3px;overflow:hidden;margin:10px 0 6px}
+  .debt-fill{height:100%;border-radius:3px;background:var(--green)}
+  .debt-foot{display:flex;justify-content:space-between;align-items:center}
+  .debt-paid{font-size:11px;color:var(--green);font-weight:500}
+  .debt-del{font-size:20px;color:#ddd;cursor:pointer;line-height:1}
+  .add-fin-btn{display:flex;align-items:center;justify-content:center;gap:6px;padding:13px;background:var(--card);border-radius:14px;border:.5px dashed #d0d0e0;font-size:13px;color:var(--text-hint);cursor:pointer;margin-bottom:8px}
+  .nav-item span{font-size:9px!important}
+  /* PROFILE */
+  .profile-header{padding:24px 16px 16px;display:flex;flex-direction:column;align-items:center;gap:12px}
+  .profile-avatar-big{width:80px;height:80px;border-radius:50%;background:var(--accent-light);border:3px solid var(--accent-mid);display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700;color:var(--accent);cursor:pointer;position:relative;flex-shrink:0}
+  .profile-avatar-edit{position:absolute;bottom:0;right:0;width:24px;height:24px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center}
+  .profile-avatar-edit i{font-size:12px;color:#fff}
+  .profile-name{font-size:22px;font-weight:700;color:var(--text)}
+  .profile-quote{font-size:13px;color:var(--text-muted);text-align:center;font-style:italic;line-height:1.5;padding:0 24px}
+  .profile-section{padding:0 16px;margin-bottom:14px}
+  .profile-section-title{font-size:11px;color:var(--text-muted);letter-spacing:.05em;text-transform:uppercase;margin-bottom:8px}
+  .win-item{background:var(--card);border-radius:12px;border:.5px solid var(--border);padding:12px 14px;margin-bottom:6px}
+  .win-title{font-size:13px;font-weight:500;color:var(--text);margin-bottom:3px}
+  .win-date{font-size:11px;color:var(--text-hint)}
+  .win-del{float:right;font-size:16px;color:#ddd;cursor:pointer;margin-left:8px}
+  .dream-chip{display:inline-flex;align-items:center;gap:5px;padding:7px 12px;border-radius:20px;background:var(--card);border:.5px solid var(--border);font-size:12px;color:var(--text);margin:0 4px 6px 0;cursor:default}
+  .dream-chip .del{font-size:13px;color:#ccc;cursor:pointer;margin-left:2px}
+  .value-chip{display:inline-flex;align-items:center;gap:5px;padding:6px 14px;border-radius:20px;background:var(--accent-light);border:.5px solid var(--accent-mid);font-size:12px;color:var(--accent);margin:0 4px 6px 0;font-weight:500}
+  .value-chip .del{font-size:13px;color:var(--accent-mid);cursor:pointer;margin-left:2px;opacity:.7}
+  .profile-stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+  .profile-stat{background:var(--card);border-radius:12px;border:.5px solid var(--border);padding:12px;text-align:center}
+  .profile-stat-val{font-size:22px;font-weight:700;color:var(--accent)}
+  .profile-stat-lbl{font-size:11px;color:var(--text-muted);margin-top:2px}
+</style>
+</head>
+<body>
+
+<!-- TODAY -->
+<div class="screen active" id="screen-today">
+  <div class="status-bar"><span id="tt">9:41</span><span style="display:flex;gap:5px"><i class="ti ti-wifi" style="font-size:12px"></i><i class="ti ti-battery" style="font-size:12px"></i></span></div>
+  <div class="topbar"><div><div class="page-title" id="wd">Понедельник</div><div class="page-sub" id="dt">11 мая 2026</div></div><div class="avatar" onclick="goTo('profile')" id="avatar-btn" style="cursor:pointer">Т</div></div>
+  <div class="scroll-area">
+    <div class="section">
+      <div class="section-title">Фокус дня</div>
+      <div class="focus-card" style="display:flex;align-items:center;gap:10px;cursor:text" onclick="document.getElementById('focus-input').focus()">
+        <i class="ti ti-star" style="font-size:18px;color:var(--amber);flex-shrink:0"></i>
+        <input id="focus-input" placeholder="Главная задача дня..." style="border:none;outline:none;background:transparent;font-size:14px;font-weight:500;color:var(--text);flex:1;font-family:inherit" value="" onkeydown="if(event.key==='Enter')this.blur()" onblur="saveFocus(this.value)">
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title" id="tasks-ttl">Задачи</div>
+      <div id="tasks-list"></div>
+      <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--card);border-radius:12px;border:.5px dashed #d0d0e0">
+        <div style="width:20px;height:20px;border-radius:6px;border:1.5px solid #d0d0e0;flex-shrink:0"></div>
+        <input id="new-task-input" placeholder="Новая задача..." style="border:none;outline:none;background:transparent;font-size:13px;color:var(--text);flex:1;font-family:inherit" onkeydown="if(event.key==='Enter')quickAddTask(this)">
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="section-title" style="padding:0 16px;margin-bottom:8px;font-size:11px;color:var(--text-muted);letter-spacing:.05em;text-transform:uppercase">Привычки</div>
+    <div class="habit-table-wrap">
+      <table class="habit-table" id="habit-table"></table>
+    </div>
+    <div style="padding:0 16px 16px">
+      <div onclick="goTo('archive')" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;background:var(--card);border-radius:14px;border:.5px solid var(--border);font-size:13px;color:var(--text-muted);cursor:pointer">
+        <i class="ti ti-history" style="font-size:16px"></i> История прошлых дней
+      </div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="nav-item active" onclick="goTo('today')"><i class="ti ti-sun"></i><span>День</span></div>
+    <div class="nav-item" onclick="goTo('month')"><i class="ti ti-calendar-month"></i><span>Месяц</span></div>
+    <div class="nav-item center" onclick="goTo('dashboard')"><div class="icon-wrap"><i class="ti ti-layout-dashboard"></i></div><span>Дашборд</span></div>
+    <div class="nav-item" onclick="goTo('finance')"><i class="ti ti-wallet"></i><span>Финансы</span></div>
+    <div class="nav-item" onclick="goTo('goals')"><i class="ti ti-list-check"></i><span>Цели</span></div>
+  </div>
+</div>
+
+<!-- GOALS -->
+<div class="screen" id="screen-goals">
+  <div class="status-bar"><span id="tt2">9:41</span><span style="display:flex;gap:5px"><i class="ti ti-wifi" style="font-size:12px"></i><i class="ti ti-battery" style="font-size:12px"></i></span></div>
+  <div class="topbar"><div><div class="page-title">Цели</div></div><div class="avatar" onclick="goTo('profile')" id="avatar-btn" style="cursor:pointer">Т</div></div>
+  <div class="tabs-bar" id="goals-tabs"></div>
+  <div class="scroll-area"><div class="section"><div id="goals-list"></div><div class="add-goal-btn" onclick="openAddGoal()"><i class="ti ti-plus"></i> добавить цель</div></div></div>
+  <div class="nav">
+    <div class="nav-item" onclick="goTo('today')"><i class="ti ti-sun"></i><span>День</span></div>
+    <div class="nav-item" onclick="goTo('month')"><i class="ti ti-calendar-month"></i><span>Месяц</span></div>
+    <div class="nav-item center" onclick="goTo('dashboard')"><div class="icon-wrap"><i class="ti ti-layout-dashboard"></i></div><span>Дашборд</span></div>
+    <div class="nav-item" onclick="goTo('finance')"><i class="ti ti-wallet"></i><span>Финансы</span></div>
+    <div class="nav-item active" onclick="goTo('goals')"><i class="ti ti-list-check"></i><span>Цели</span></div>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div class="screen" id="screen-dashboard">
+  <div class="status-bar"><span id="tt3">9:41</span><span style="display:flex;gap:5px"><i class="ti ti-wifi" style="font-size:12px"></i><i class="ti ti-battery" style="font-size:12px"></i></span></div>
+  <div class="topbar"><div><div class="page-title">Дашборд</div><div class="page-sub">Общий обзор</div></div><div class="avatar" onclick="goTo('profile')" id="avatar-btn" style="cursor:pointer">Т</div></div>
+  <div class="scroll-area">
+    <div class="stats-grid" id="dash-stats"></div>
+    <div class="section"><div class="section-title">Большие цели</div><div id="dash-goals"></div></div>
+    <div class="section"><div class="section-title">Активные квесты</div><div id="dash-quests"></div></div>
+    <div style="padding:0 16px 12px">
+      <div id="reset-btn" style="display:flex;align-items:center;justify-content:center;gap:6px;padding:12px;background:var(--card);border-radius:14px;border:.5px solid #f0d0d0;font-size:13px;color:#d4537e;cursor:pointer">
+        <i class="ti ti-trash" style="font-size:16px"></i> Сбросить все данные
+      </div>
+      <div style="text-align:center;margin-top:10px">
+        <span onclick="toggleDataMenu()" style="font-size:11px;color:#ccc;cursor:pointer;letter-spacing:.05em">• • •</span>
+      </div>
+      <div id="data-menu" style="display:none;margin-top:8px">
+        <div style="display:flex;gap:8px">
+          <div onclick="exportData()" style="flex:1;padding:10px;background:var(--card);border-radius:12px;border:.5px solid var(--border);font-size:12px;color:var(--text-muted);cursor:pointer;text-align:center">
+            <i class="ti ti-download" style="font-size:14px;display:block;margin-bottom:3px"></i>Экспорт
+          </div>
+          <label style="flex:1;padding:10px;background:var(--card);border-radius:12px;border:.5px solid var(--border);font-size:12px;color:var(--text-muted);cursor:pointer;text-align:center;display:block">
+            <i class="ti ti-upload" style="font-size:14px;display:block;margin-bottom:3px"></i>Импорт
+            <input type="file" accept=".json" onchange="importData(this)" style="display:none">
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="nav-item" onclick="goTo('today')"><i class="ti ti-sun"></i><span>День</span></div>
+    <div class="nav-item" onclick="goTo('month')"><i class="ti ti-calendar-month"></i><span>Месяц</span></div>
+    <div class="nav-item center active" onclick="goTo('dashboard')"><div class="icon-wrap"><i class="ti ti-layout-dashboard"></i></div><span>Дашборд</span></div>
+    <div class="nav-item" onclick="goTo('finance')"><i class="ti ti-wallet"></i><span>Финансы</span></div>
+    <div class="nav-item" onclick="goTo('goals')"><i class="ti ti-list-check"></i><span>Цели</span></div>
+  </div>
+</div>
+
+<!-- QUESTS -->
+<div class="screen" id="screen-quests">
+  <div class="status-bar"><span id="tt4">9:41</span><span style="display:flex;gap:5px"><i class="ti ti-wifi" style="font-size:12px"></i><i class="ti ti-battery" style="font-size:12px"></i></span></div>
+  <div class="topbar"><div><div class="page-title">Квесты</div><div class="page-sub">Активные шаги</div></div><div class="avatar" onclick="goTo('profile')" id="avatar-btn" style="cursor:pointer">Т</div></div>
+  <div class="scroll-area"><div id="quests-list" style="padding:0 16px"></div></div>
+  <div class="nav">
+    <div class="nav-item" onclick="goTo('today')"><i class="ti ti-sun"></i><span>День</span></div>
+    <div class="nav-item" onclick="goTo('month')"><i class="ti ti-calendar-month"></i><span>Месяц</span></div>
+    <div class="nav-item center" onclick="goTo('dashboard')"><div class="icon-wrap"><i class="ti ti-layout-dashboard"></i></div><span>Дашборд</span></div>
+    <div class="nav-item" onclick="goTo('finance')"><i class="ti ti-wallet"></i><span>Финансы</span></div>
+    <div class="nav-item" onclick="goTo('goals')"><i class="ti ti-list-check"></i><span>Цели</span></div>
+  </div>
+</div>
+
+<!-- PROGRESS -->
+<div class="screen" id="screen-progress">
+  <div class="status-bar"><span id="tt5">9:41</span><span style="display:flex;gap:5px"><i class="ti ti-wifi" style="font-size:12px"></i><i class="ti ti-battery" style="font-size:12px"></i></span></div>
+  <div class="topbar"><div><div class="page-title">Прогресс</div></div><div class="avatar" onclick="goTo('profile')" id="avatar-btn" style="cursor:pointer">Т</div></div>
+  <div class="period-tabs">
+    <div class="period-tab active" onclick="setPeriod('week',this)">Неделя</div>
+    <div class="period-tab" onclick="setPeriod('month',this)">Месяц</div>
+    <div class="period-tab" onclick="setPeriod('year',this)">Год</div>
+  </div>
+  <div class="scroll-area">
+    <div class="stats-grid" id="progress-stats"></div>
+    <div class="section"><div class="section-title">Задачи по дням</div><div class="card" style="padding:14px"><div class="bar-chart" id="bar-chart"></div></div></div>
+    <div class="section"><div class="section-title">Привычки за неделю</div><div class="card" style="padding:14px"><div id="habit-grid"></div></div></div>
+    <div class="streak-card"><i class="ti ti-flame streak-fire"></i><div><div style="display:flex;align-items:baseline;gap:8px"><div class="streak-number" id="streak-num">14</div><div style="font-size:14px;color:var(--text-muted)">дней подряд</div></div><div style="font-size:12px;color:var(--text-hint)" id="streak-best">Лучшая серия: 21 день</div></div></div>
+  </div>
+  <div class="nav">
+    <div class="nav-item" onclick="goTo('today')"><i class="ti ti-sun"></i><span>День</span></div>
+    <div class="nav-item" onclick="goTo('month')"><i class="ti ti-calendar-month"></i><span>Месяц</span></div>
+    <div class="nav-item center" onclick="goTo('dashboard')"><div class="icon-wrap"><i class="ti ti-layout-dashboard"></i></div><span>Дашборд</span></div>
+    <div class="nav-item" onclick="goTo('finance')"><i class="ti ti-wallet"></i><span>Финансы</span></div>
+    <div class="nav-item" onclick="goTo('goals')"><i class="ti ti-list-check"></i><span>Цели</span></div>
+  </div>
+</div>
+
+<!-- FINANCE -->
+<div class="screen" id="screen-finance">
+  <div class="status-bar"><span id="tt6">9:41</span><span style="display:flex;gap:5px"><i class="ti ti-wifi" style="font-size:12px"></i><i class="ti ti-battery" style="font-size:12px"></i></span></div>
+  <div class="topbar"><div><div class="page-title">Финансы</div></div><div class="avatar" onclick="goTo('profile')" id="avatar-btn" style="cursor:pointer">Т</div></div>
+  <div class="fin-tabs">
+    <div class="fin-tab active" id="fin-tab-income" onclick="switchFinTab('income')">💰 Заработок</div>
+    <div class="fin-tab" id="fin-tab-debts" onclick="switchFinTab('debts')">📋 Долги</div>
+  </div>
+  <div class="scroll-area">
+    <!-- INCOME -->
+    <div id="fin-income-view">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:0 16px;margin-bottom:12px">
+        <div onclick="incomeMonthStep(-1)" style="width:32px;height:32px;border-radius:10px;background:var(--card);border:.5px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer"><i class="ti ti-chevron-left" style="font-size:16px;color:var(--text-muted)"></i></div>
+        <div id="income-month-label" style="font-size:14px;font-weight:600;color:var(--text)">Май 2026</div>
+        <div onclick="incomeMonthStep(1)" id="income-month-next" style="width:32px;height:32px;border-radius:10px;background:var(--card);border:.5px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer"><i class="ti ti-chevron-right" style="font-size:16px;color:var(--text-muted)"></i></div>
+      </div>
+      <div class="fin-summary" id="income-summary"></div>
+      <div class="section">
+        <div id="income-list"></div>
+        <div class="add-fin-btn" onclick="openAddIncome()"><i class="ti ti-plus"></i> добавить доход</div>
+      </div>
+    </div>
+    <!-- DEBTS -->
+    <div id="fin-debts-view" style="display:none">
+      <div class="fin-summary" id="debts-summary"></div>
+      <div class="section">
+        <div class="section-title">Все долги</div>
+        <div id="debts-list"></div>
+        <div class="add-fin-btn" onclick="openAddDebt()"><i class="ti ti-plus"></i> добавить долг</div>
+      </div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="nav-item" onclick="goTo('today')"><i class="ti ti-sun"></i><span>День</span></div>
+    <div class="nav-item" onclick="goTo('month')"><i class="ti ti-calendar-month"></i><span>Месяц</span></div>
+    <div class="nav-item center" onclick="goTo('dashboard')"><div class="icon-wrap"><i class="ti ti-layout-dashboard"></i></div><span>Дашборд</span></div>
+    <div class="nav-item active" onclick="goTo('finance')"><i class="ti ti-wallet"></i><span>Финансы</span></div>
+    <div class="nav-item" onclick="goTo('goals')"><i class="ti ti-list-check"></i><span>Цели</span></div>
+  </div>
+</div>
+
+<!-- MONTH -->
+<div class="screen" id="screen-month">
+  <div class="status-bar"><span id="tt7">9:41</span><span style="display:flex;gap:5px"><i class="ti ti-wifi" style="font-size:12px"></i><i class="ti ti-battery" style="font-size:12px"></i></span></div>
+  <div class="topbar">
+    <div><div class="page-title" id="month-title">Май</div><div class="page-sub" id="month-sub">Цели месяца</div></div>
+    <div class="avatar" onclick="goTo('profile')" id="avatar-btn" style="cursor:pointer">Т</div>
+  </div>
+  <div class="scroll-area">
+    <div style="padding:0 16px;margin-bottom:12px">
+      <div style="background:var(--card);border-radius:14px;border:.5px solid var(--border);padding:14px;display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div style="font-size:11px;color:var(--text-muted);margin-bottom:4px">Выполнено</div>
+          <div style="font-size:28px;font-weight:700;color:var(--text)" id="month-done-count">0 / 0</div>
+        </div>
+        <div style="width:64px;height:64px;position:relative">
+          <svg viewBox="0 0 64 64" style="transform:rotate(-90deg);width:64px;height:64px">
+            <circle cx="32" cy="32" r="26" fill="none" stroke="var(--border-light)" stroke-width="7"/>
+            <circle cx="32" cy="32" r="26" fill="none" stroke="var(--accent)" stroke-width="7" stroke-linecap="round"
+              stroke-dasharray="163" id="month-circle" stroke-dashoffset="163"/>
+          </svg>
+          <div id="month-pct" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--accent)">0%</div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-title">Цели на месяц</div>
+      <div id="month-goals-list"></div>
+      <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--card);border-radius:12px;border:.5px dashed #d0d0e0;margin-bottom:6px">
+        <div style="width:20px;height:20px;border-radius:6px;border:1.5px solid #d0d0e0;flex-shrink:0"></div>
+        <input id="new-month-goal-input" placeholder="Новая цель месяца..." style="border:none;outline:none;background:transparent;font-size:13px;color:var(--text);flex:1;font-family:inherit" onkeydown="if(event.key==='Enter')quickAddMonthGoal(this)">
+      </div>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="nav-item" onclick="goTo('today')"><i class="ti ti-sun"></i><span>День</span></div>
+    <div class="nav-item active" onclick="goTo('month')"><i class="ti ti-calendar-month"></i><span>Месяц</span></div>
+    <div class="nav-item center" onclick="goTo('dashboard')"><div class="icon-wrap"><i class="ti ti-layout-dashboard"></i></div><span>Дашборд</span></div>
+    <div class="nav-item" onclick="goTo('finance')"><i class="ti ti-wallet"></i><span>Финансы</span></div>
+    <div class="nav-item" onclick="goTo('goals')"><i class="ti ti-list-check"></i><span>Цели</span></div>
+  </div>
+</div>
+
+<!-- ARCHIVE -->
+<div class="screen" id="screen-archive">
+  <div class="status-bar"><span id="tt8">9:41</span><span style="display:flex;gap:5px"><i class="ti ti-wifi" style="font-size:12px"></i><i class="ti ti-battery" style="font-size:12px"></i></span></div>
+  <div class="topbar">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div onclick="goTo('today')" style="width:32px;height:32px;border-radius:10px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;cursor:pointer">
+        <i class="ti ti-arrow-left" style="font-size:16px;color:var(--accent)"></i>
+      </div>
+      <div><div class="page-title">История</div><div class="page-sub" id="archive-sub">Прошлые дни</div></div>
+    </div>
+    <div class="avatar" onclick="goTo('profile')" id="avatar-btn" style="cursor:pointer">Т</div>
+  </div>
+  <div class="scroll-area" id="archive-scroll">
+    <div id="archive-empty" style="display:none;text-align:center;padding:60px 20px;color:var(--text-hint)">
+      <i class="ti ti-calendar-off" style="font-size:40px;display:block;margin-bottom:12px;opacity:.4"></i>
+      <div style="font-size:14px">Пока нет истории</div>
+      <div style="font-size:12px;margin-top:6px">Она появится со следующего дня</div>
+    </div>
+    <div id="archive-list" style="padding:0 16px"></div>
+  </div>
+</div>
+
+<!-- PROFILE -->
+<div class="screen" id="screen-profile">
+  <div class="status-bar"><span id="tt9">9:41</span><span style="display:flex;gap:5px"><i class="ti ti-wifi" style="font-size:12px"></i><i class="ti ti-battery" style="font-size:12px"></i></span></div>
+  <div class="topbar">
+    <div style="display:flex;align-items:center;gap:10px">
+      <div onclick="goTo('today')" style="width:32px;height:32px;border-radius:10px;background:var(--accent-light);display:flex;align-items:center;justify-content:center;cursor:pointer">
+        <i class="ti ti-arrow-left" style="font-size:16px;color:var(--accent)"></i>
+      </div>
+      <div class="page-title">Профиль</div>
+    </div>
+  </div>
+  <div class="scroll-area">
+    <div class="profile-header">
+      <div class="profile-avatar-big" onclick="openEditProfile()">
+        <span id="profile-avatar-letter">Т</span>
+        <div class="profile-avatar-edit"><i class="ti ti-pencil"></i></div>
+      </div>
+      <div id="profile-name-display" class="profile-name">Тимур</div>
+      <div id="profile-quote-display" class="profile-quote" onclick="openEditProfile()">Нажми чтобы добавить цитату...</div>
+    </div>
+
+    <!-- Статистика -->
+    <div class="profile-section">
+      <div class="profile-section-title">Статистика жизни</div>
+      <div class="profile-stat-grid" id="profile-stats"></div>
+    </div>
+
+    <!-- Дневник побед -->
+    <div class="profile-section">
+      <div class="profile-section-title">Дневник побед</div>
+      <div id="wins-list"></div>
+      <div onclick="openAddWin()" style="display:flex;align-items:center;gap:6px;padding:11px 14px;background:var(--card);border-radius:12px;border:.5px dashed #d0d0e0;font-size:13px;color:var(--text-hint);cursor:pointer;margin-bottom:6px">
+        <i class="ti ti-trophy" style="font-size:15px"></i> Записать победу
+      </div>
+    </div>
+
+    <!-- Мечты -->
+    <div class="profile-section">
+      <div class="profile-section-title">Мечты</div>
+      <div id="dreams-list" style="margin-bottom:6px"></div>
+      <div style="display:flex;gap:8px">
+        <input id="dream-input" class="modal-input" placeholder="Добавить мечту..." style="margin-bottom:0;flex:1" onkeydown="if(event.key==='Enter')addDream()">
+        <button onclick="addDream()" style="padding:0 14px;border-radius:12px;border:none;background:var(--accent);color:#fff;font-size:13px;cursor:pointer;font-family:inherit">+</button>
+      </div>
+    </div>
+
+    <!-- Ценности -->
+    <div class="profile-section">
+      <div class="profile-section-title">Мои ценности</div>
+      <div id="values-list" style="margin-bottom:6px"></div>
+      <div style="display:flex;gap:8px">
+        <input id="value-input" class="modal-input" placeholder="Добавить ценность..." style="margin-bottom:0;flex:1" onkeydown="if(event.key==='Enter')addValue()">
+        <button onclick="addValue()" style="padding:0 14px;border-radius:12px;border:none;background:var(--accent);color:#fff;font-size:13px;cursor:pointer;font-family:inherit">+</button>
+      </div>
+    </div>
+
+    <div style="height:16px"></div>
+  </div>
+</div>
+
+<!-- MODALS -->
+<div class="modal-overlay" id="modal-habit">
+  <div class="modal-sheet">
+    <div class="modal-title">Новая привычка</div>
+    <input class="modal-input" id="habit-text-input" placeholder="Название (напр: Медитация, Спорт)">
+    <div class="modal-row"><button class="btn-cancel" onclick="closeModal('modal-habit')">Отмена</button><button class="btn-save" onclick="saveHabit()">Сохранить</button></div>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-profile">
+  <div class="modal-sheet">
+    <div class="modal-title">Редактировать профиль</div>
+    <input class="modal-input" id="profile-name-input" placeholder="Твоё имя">
+    <input class="modal-input" id="profile-emoji-input" placeholder="Эмодзи аватарки (напр: 🔥 ⚡ 💎)">
+    <input class="modal-input" id="profile-quote-input" placeholder="Цитата или девиз...">
+    <div class="modal-row"><button class="btn-cancel" onclick="closeModal('modal-profile')">Отмена</button><button class="btn-save" onclick="saveProfile()">Сохранить</button></div>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-pay-debt">
+  <div class="modal-sheet">
+    <div class="modal-title" id="pay-debt-title">Погашение долга</div>
+    <div id="pay-debt-remain" style="font-size:13px;color:var(--text-muted);margin-bottom:12px"></div>
+    <input type="hidden" id="pay-debt-id">
+    <input class="modal-input" id="pay-debt-amount" type="number" placeholder="Сумма платежа">
+    <div class="modal-row">
+      <button class="btn-cancel" onclick="closeModal('modal-pay-debt')">Отмена</button>
+      <button class="btn-save" onclick="savePayDebt()">Внести платёж</button>
+    </div>
+  </div>
+</div>
+  <div class="modal-sheet">
+    <div class="modal-title">🏆 Записать победу</div>
+    <input class="modal-input" id="win-title-input" placeholder="Что ты сделал / достиг?">
+    <input class="modal-input" id="win-date-input" type="date">
+    <input class="modal-input" id="win-note-input" placeholder="Подробности (необязательно)">
+    <div class="modal-row"><button class="btn-cancel" onclick="closeModal('modal-win')">Отмена</button><button class="btn-save" onclick="saveWin()">Сохранить</button></div>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-goal">
+  <div class="modal-sheet">
+    <div class="modal-title">Новая цель</div>
+    <input class="modal-input" id="goal-name-input" placeholder="Название цели...">
+    <input class="modal-input" id="goal-desc-input" placeholder="Описание (необязательно)">
+    <select class="modal-select" id="goal-cat-sel"><option value="money">Деньги</option><option value="home">Жильё</option><option value="skills">Навыки</option><option value="health">Здоровье</option></select>
+    <div class="modal-row"><button class="btn-cancel" onclick="closeModal('modal-goal')">Отмена</button><button class="btn-save" onclick="saveGoal()">Сохранить</button></div>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-income">
+  <div class="modal-sheet">
+    <div class="modal-title">Новый доход</div>
+    <input class="modal-input" id="income-title-input" placeholder="Источник (напр: Монтаж для клиента)">
+    <input class="modal-input" id="income-amount-input" type="number" placeholder="Сумма в рублях">
+    <input class="modal-input" id="income-date-input" type="date">
+    <input class="modal-input" id="income-note-input" placeholder="Примечание (необязательно)">
+    <div class="modal-row"><button class="btn-cancel" onclick="closeModal('modal-income')">Отмена</button><button class="btn-save" onclick="saveIncome()">Сохранить</button></div>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-debt">
+  <div class="modal-sheet">
+    <div class="modal-title">Новый долг</div>
+    <input class="modal-input" id="debt-name-input" placeholder="Кому (напр: Радус, Банк, Брат)">
+    <div style="display:flex;gap:8px;margin-bottom:10px">
+      <input class="modal-input" id="debt-total-input" type="number" placeholder="Сумма долга" style="margin-bottom:0;flex:1">
+      <select class="modal-select" id="debt-currency-select" style="margin-bottom:0;width:80px">
+        <option value="RUB">₽ руб</option>
+        <option value="USD">$ USD</option>
+      </select>
+    </div>
+    <input class="modal-input" id="debt-paid-input" type="number" placeholder="Уже выплачено (0 если ничего)">
+    <input class="modal-input" id="debt-date-input" type="date" placeholder="Срок выплаты (необязательно)">
+    <input class="modal-input" id="debt-note-input" placeholder="Примечание">
+    <div class="modal-row"><button class="btn-cancel" onclick="closeModal('modal-debt')">Отмена</button><button class="btn-save" onclick="saveDebt()">Сохранить</button></div>
+  </div>
+</div>
+
+<script>
+const CATS={money:{label:'Деньги',icon:'ti-coin',color:'#ef9f27',light:'#faeeda',dark:'#854f0b'},home:{label:'Жильё',icon:'ti-home',color:'#1d9e75',light:'#e1f5ee',dark:'#0f6e56'},skills:{label:'Навыки',icon:'ti-device-laptop',color:'#534ab7',light:'#eeedfe',dark:'#3c3489'},health:{label:'Здоровье',icon:'ti-heart',color:'#d4537e',light:'#fbeaf0',dark:'#993556'}};
+
+function dateKey(d){return d.toISOString().slice(0,10);}
+function todayKey(){return dateKey(new Date());}
+
+function defaultData(){return{tasks:[],habits:[{id:1,text:'Чай',history:{}},{id:2,text:'Чтение',history:{}},{id:3,text:'Прогулка',history:{}}],goals:[],streak:0,bestStreak:0,habitHistory:{},taskHistory:[0,0,0,0,0,0,0],activeGoalCat:'money',income:[],debts:[],focusDay:'',profile:{name:'',emoji:'',quote:''},wins:[],dreams:[],values:[]}}
+
+let data=JSON.parse(localStorage.getItem('lifeapp')||'null')||defaultData();
+if(!data.income)data.income=[];
+if(!data.debts)data.debts=[];
+if(!data.monthGoals)data.monthGoals={};
+if(!data.taskArchive)data.taskArchive={};
+if(!data.lastDay)data.lastDay=dateKey(new Date());
+if(!data.profile)data.profile={name:'',emoji:'',quote:''};
+if(!data.wins)data.wins=[];
+if(!data.dreams)data.dreams=[];
+if(!data.values)data.values=[];
+data.habits=data.habits.map(h=>({id:h.id,text:h.text,history:h.history||{}}));
+function save(){localStorage.setItem('lifeapp',JSON.stringify(data));}
+
+function goTo(s){
+  document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));
+  document.getElementById('screen-'+s).classList.add('active');
+  if(s==='today')renderToday();
+  if(s==='goals')renderGoals();
+  if(s==='dashboard')renderDashboard();
+  if(s==='quests')renderQuests();
+  if(s==='progress')renderProgress();
+  if(s==='finance'){activeFinTab='income';switchFinTab('income');}
+  if(s==='month')renderMonth();
+  if(s==='archive')renderArchive();
+  if(s==='profile')renderProfile();
+}
+
+function tick(){const n=new Date(),t=n.getHours().toString().padStart(2,'0')+':'+n.getMinutes().toString().padStart(2,'0');['tt','tt2','tt3','tt4','tt5','tt6','tt7','tt8','tt9'].forEach(id=>{const e=document.getElementById(id);if(e)e.textContent=t;});}
+setInterval(tick,10000);tick();
+(function(){const n=new Date(),days=['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'],months=['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];document.getElementById('wd').textContent=days[n.getDay()];document.getElementById('dt').textContent=n.getDate()+' '+months[n.getMonth()]+' '+n.getFullYear();})();
+
+function getWeekDates(){
+  const now=new Date();
+  const day=now.getDay(); // 0=вс
+  const monday=new Date(now);
+  monday.setDate(now.getDate()-(day===0?6:day-1));
+  monday.setHours(0,0,0,0);
+  return Array.from({length:7},(_,i)=>{const d=new Date(monday);d.setDate(monday.getDate()+i);return d;});
+}
+const DAY_SHORT=['Пн','Вт','Ср','Чт','Пт','Сб','Вс'];
+
+function renderHabitTable(){
+  const table=document.getElementById('habit-table');
+  if(!table)return;
+  const week=getWeekDates();
+  const todayKey=dateKey(new Date());
+  // Header
+  let html=`<thead><tr><th class="habit-name-col">Привычка</th>`;
+  week.forEach((d,i)=>{
+    const key=dateKey(d);
+    const isToday=key===todayKey;
+    html+=`<th class="${isToday?'today-header':''}">${DAY_SHORT[i]}</th>`;
+  });
+  html+=`<th></th></tr></thead><tbody>`;
+  // Rows
+  if(!data.habits.length){
+    html+=`<tr><td colspan="9" style="text-align:center;padding:16px;color:var(--text-hint);font-size:12px">Нет привычек</td></tr>`;
+  }
+  data.habits.forEach(h=>{
+    html+=`<tr><td class="habit-name-cell">${h.text}</td>`;
+    week.forEach(d=>{
+      const key=dateKey(d);
+      const isToday=key===todayKey;
+      const checked=h.history&&h.history[key];
+      html+=`<td><div class="hcb${checked?' on':''}${isToday&&!checked?' today-col':''}" onclick="toggleHabitDay(${h.id},'${key}')"></div></td>`;
+    });
+    html+=`<td><span class="habit-del-btn" onclick="deleteHabit(${h.id})"><i class="ti ti-x"></i></span></td></tr>`;
+  });
+  // Add row
+  html+=`<tr class="add-habit-row" onclick="openAddHabit()"><td colspan="9"><i class="ti ti-plus" style="font-size:13px;vertical-align:-1px;margin-right:4px"></i>добавить привычку</td></tr>`;
+  html+=`</tbody>`;
+  table.innerHTML=html;
+}
+
+function toggleHabitDay(id,dateKey){
+  const h=data.habits.find(h=>h.id===id);
+  if(!h)return;
+  if(!h.history)h.history={};
+  h.history[dateKey]=!h.history[dateKey];
+  save();renderHabitTable();
+}
+
+// ===== DAILY TASKS WITH ARCHIVE =====
+
+function checkDayRollover(){
+  const today=todayKey();
+  if(!data.lastDay)data.lastDay=today;
+  if(data.lastDay!==today){
+    if(!data.taskArchive)data.taskArchive={};
+    // архивируем все задачи вчерашнего дня как есть
+    if(data.tasks&&data.tasks.length){
+      data.taskArchive[data.lastDay]={
+        tasks:[...data.tasks],
+        focus:data.focusDay||''
+      };
+    }
+    // невыполненные переносим на сегодня
+    const carried=data.tasks.filter(t=>!t.done).map(t=>({...t,carried:true}));
+    data.tasks=carried;
+    data.focusDay='';
+    data.lastDay=today;
+    save();
+  }
+}
+
+function renderToday(){
+  checkDayRollover();
+  const fi=document.getElementById('focus-input');
+  if(fi&&document.activeElement!==fi)fi.value=data.focusDay||'';
+  const done=data.tasks.filter(t=>t.done).length;
+  document.getElementById('tasks-ttl').textContent='Задачи'+(data.tasks.length?` — ${done} из ${data.tasks.length}`:'');
+  const list=document.getElementById('tasks-list');list.innerHTML='';
+  data.tasks.forEach(task=>{
+    const d=document.createElement('div');d.className='task-item';
+    d.innerHTML=`<div class="checkbox ${task.done?'checked':''}" onclick="toggleTask(${task.id})">${task.done?'<i class="ti ti-check"></i>':''}</div>
+      <span class="task-text ${task.done?'done':''}" onclick="toggleTask(${task.id})">${task.text}</span>
+      ${task.tag?`<span class="task-tag">${task.tag}</span>`:''}
+      ${task.carried&&!task.done?'<span style="font-size:9px;color:var(--text-hint);background:var(--border-light);padding:2px 6px;border-radius:8px;flex-shrink:0">перенос</span>':''}
+      <span onclick="deleteTask(${task.id})" style="font-size:18px;color:#ddd;cursor:pointer;padding:2px 4px;flex-shrink:0"><i class="ti ti-x"></i></span>`;
+    list.appendChild(d);
+  });
+  // архив — показываем последние 3 дня
+  if(data.taskArchive&&Object.keys(data.taskArchive).length){
+    const archEl=document.getElementById('tasks-archive');
+    if(archEl){
+      const keys=Object.keys(data.taskArchive).sort().reverse().slice(0,7);
+      let html='';
+      keys.forEach(k=>{
+        const day=data.taskArchive[k];
+        const doneCnt=day.tasks.filter(t=>t.done).length;
+        const d=new Date(k);
+        const label=d.toLocaleDateString('ru-RU',{day:'numeric',month:'short',weekday:'short'});
+        html+=`<div onclick="toggleArchiveDay('${k}')" style="cursor:pointer;margin-bottom:4px">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:var(--card);border-radius:10px;border:.5px solid var(--border)">
+            <span style="font-size:12px;color:var(--text-muted)">${label}</span>
+            <span style="font-size:11px;color:${doneCnt===day.tasks.length&&day.tasks.length?'var(--green)':'var(--text-hint)'}">${doneCnt}/${day.tasks.length} ✓</span>
+          </div>
+          <div id="arch-${k}" style="display:none;padding:4px 0 4px 12px">
+            ${day.focus?`<div style="font-size:11px;color:var(--amber);margin-bottom:4px">★ ${day.focus}</div>`:''}
+            ${day.tasks.map(t=>`<div style="font-size:12px;color:${t.done?'var(--text-hint)':'var(--text)'};padding:2px 0;${t.done?'text-decoration:line-through':''}">${t.done?'✓ ':''} ${t.text}</div>`).join('')}
+          </div>
+        </div>`;
+      });
+      archEl.innerHTML=html;
+    }
+  }
+  renderHabitTable();
+}
+
+function toggleArchiveDay(k){
+  const el=document.getElementById('arch-'+k);
+  if(el)el.style.display=el.style.display==='none'?'block':'none';
+}
+
+function saveFocus(val){data.focusDay=val.trim();save();}
+
+function quickAddTask(input){
+  const text=input.value.trim();
+  if(!text)return;
+  checkDayRollover();
+  data.tasks.push({id:Date.now(),text,tag:'',done:false});
+  save();input.value='';renderToday();
+  setTimeout(()=>input.focus(),50);
+}
+
+function toggleTask(id){const t=data.tasks.find(t=>t.id===id);if(t){t.done=!t.done;save();renderToday();}}
+function deleteTask(id){data.tasks=data.tasks.filter(t=>t.id!==id);save();renderToday();}
+function deleteHabit(id){if(confirm('Удалить привычку?')){data.habits=data.habits.filter(h=>h.id!==id);save();renderHabitTable();}}
+function openAddHabit(){document.getElementById('habit-text-input').value='';document.getElementById('modal-habit').classList.add('open');}
+function saveHabit(){
+  const text=document.getElementById('habit-text-input').value.trim();
+  if(!text)return;
+  data.habits.push({id:Date.now(),text,history:{}});
+  save();closeModal('modal-habit');renderHabitTable();
+}
+
+function renderGoals(){
+  const tb=document.getElementById('goals-tabs');tb.innerHTML='';
+  Object.entries(CATS).forEach(([key,cat])=>{const b=document.createElement('div');b.className='tab-btn'+(data.activeGoalCat===key?' active':'');b.innerHTML=`<i class="ti ${cat.icon}"></i> ${cat.label}`;b.onclick=()=>{data.activeGoalCat=key;save();renderGoals();};tb.appendChild(b);});
+  const cat=CATS[data.activeGoalCat];
+  const list=document.getElementById('goals-list');list.innerHTML='';
+  data.goals.filter(g=>g.cat===data.activeGoalCat).forEach(g=>{
+    const d=document.createElement('div');d.className='goal-card';
+    const ds=g.steps.filter(s=>s.done).length,locked=g.pct===0&&!g.steps.find(s=>s.active);
+    d.innerHTML=`<div class="gc-top"><div class="gc-name">${g.name}</div><div style="display:flex;align-items:center;gap:6px"><div class="gc-badge ${locked?'badge-locked':'badge-active'}">${locked?'Заблокировано':'В процессе'}</div><span onclick="deleteGoal(${g.id})" style="font-size:16px;color:#ddd;cursor:pointer"><i class="ti ti-x"></i></span></div></div>${g.desc?`<div class="gc-desc">${g.desc}</div>`:''}<div class="progress-track"><div class="progress-fill" style="width:${g.pct}%;background:${cat.color}"></div></div><div class="gc-foot"><span class="gc-pct" style="color:${cat.color}">${g.pct}%</span><span class="gc-steps">${ds} из ${g.steps.length} шагов</span></div>`;
+    list.appendChild(d);
+  });
+}
+function deleteGoal(id){if(confirm('Удалить цель?')){data.goals=data.goals.filter(g=>g.id!==id);save();renderGoals();}}
+
+function renderDashboard(){
+  const dt=data.tasks.filter(t=>t.done).length,tt=data.tasks.length,dh=data.habits.filter(h=>h.done).length;
+  document.getElementById('dash-stats').innerHTML=`<div class="stat-card"><div class="stat-icon"><i class="ti ti-flame" style="color:var(--orange)"></i></div><div class="stat-label">Серия дней</div><div class="stat-value">${data.streak}</div><div class="stat-sub">Лучшая: ${data.bestStreak}</div></div><div class="stat-card"><div class="stat-icon"><i class="ti ti-check" style="color:var(--green)"></i></div><div class="stat-label">Задачи сегодня</div><div class="stat-value">${dt}/${tt}</div><div class="stat-sub">${tt?Math.round(dt/tt*100):0}%</div></div><div class="stat-card"><div class="stat-icon"><i class="ti ti-target" style="color:var(--accent)"></i></div><div class="stat-label">Активных целей</div><div class="stat-value">${data.goals.filter(g=>g.pct>0&&g.pct<100).length}</div><div class="stat-sub">из ${data.goals.length}</div></div><div class="stat-card"><div class="stat-icon"><i class="ti ti-heart" style="color:var(--pink)"></i></div><div class="stat-label">Привычки</div><div class="stat-value">${dh}/${data.habits.length}</div><div class="stat-sub">сегодня</div></div>`;
+  const dg=document.getElementById('dash-goals');dg.innerHTML='';
+  data.goals.forEach(g=>{const c=CATS[g.cat];const d=document.createElement('div');d.className='dash-goal';d.innerHTML=`<div class="dash-goal-row"><span class="dash-goal-name"><i class="ti ${c.icon}" style="font-size:12px;vertical-align:-1px;margin-right:4px;color:${c.color}"></i>${g.name}</span><span style="font-size:12px;font-weight:500;color:${c.color}">${g.pct}%</span></div><div class="progress-track"><div class="progress-fill" style="width:${g.pct}%;background:${c.color}"></div></div>`;dg.appendChild(d);});
+  if(!data.goals.length)dg.innerHTML='<div style="text-align:center;padding:16px;color:var(--text-hint);font-size:13px">Нет целей. Добавь в разделе Цели</div>';
+  const dq=document.getElementById('dash-quests');dq.innerHTML='';
+  data.goals.forEach(g=>{const step=g.steps.find(s=>s.active&&!s.done);const c=CATS[g.cat];const d=document.createElement('div');d.className='quest-dash';d.innerHTML=`<div class="qdot" style="background:${step?c.color:'#ddd'}"></div><div style="flex:1;min-width:0"><div class="quest-name">${g.name}</div><div class="quest-sub">${step?step.text:'Заблокировано'}</div></div>`;dq.appendChild(d);});
+  // Кнопка сброса
+  const rb=document.getElementById('reset-btn');
+  if(rb)rb.onclick=()=>{if(confirm('Сбросить ВСЕ данные и начать с чистого листа?')){localStorage.removeItem('lifeapp');location.reload();}};
+}
+
+function renderQuests(){
+  const list=document.getElementById('quests-list');list.innerHTML='';
+  Object.entries(CATS).forEach(([key,cat])=>{
+    const goals=data.goals.filter(g=>g.cat===key&&g.steps.find(s=>s.active));
+    if(!goals.length)return;
+    const lbl=document.createElement('div');lbl.className='section-title';lbl.style.marginBottom='8px';lbl.textContent=cat.label;list.appendChild(lbl);
+    goals.forEach(g=>{
+      const card=document.createElement('div');card.className='quest-card';
+      let head=`<div class="quest-head"><div class="q-cat-dot" style="background:${cat.color}"></div><div class="q-goal-name">${g.name}</div><div class="q-badge badge-active">В процессе</div></div>`;
+      let steps='';
+      g.steps.forEach((s,i)=>{
+        const last=i===g.steps.length-1;let ds,di,nc,ht,hc,act='';
+        if(s.done){ds=`background:var(--accent-light);border:1.5px solid var(--accent-mid)`;di=`<i class="ti ti-check" style="color:var(--accent)"></i>`;nc='done';ht='';hc='';}
+        else if(s.active){ds=`background:${cat.color};border:1.5px solid ${cat.dark}`;di=`<i class="ti ti-player-play" style="color:#fff"></i>`;nc='';ht='Сейчас';hc='active';act=`<div class="step-action"><i class="ti ti-arrow-right"></i> начать</div>`;}
+        else{ds=`background:var(--border-light);border:1.5px solid var(--border)`;di='';nc='locked';ht='Следующий шаг';hc='';}
+        steps+=`<div class="step-row"><div class="step-line"><div class="step-dot" style="${ds}">${di}</div>${!last?'<div class="step-connector"></div>':''}</div><div class="step-body"><div class="step-name ${nc}">${s.text}</div>${ht?`<div class="step-hint ${hc}">${ht}</div>`:''}${act}</div></div>`;
+      });
+      card.innerHTML=head+steps;list.appendChild(card);
+    });
+  });
+}
+
+function renderProgress(){
+  const dt=data.tasks.filter(t=>t.done).length,dh=data.habits.filter(h=>h.done).length;
+  const wt=data.taskHistory.reduce((a,b)=>a+b,0)+dt;
+  document.getElementById('progress-stats').innerHTML=`<div class="stat-card"><div class="stat-label">Задач за неделю</div><div class="stat-value">${wt}</div><div class="stat-sub" style="color:var(--green)">выполнено</div></div><div class="stat-card"><div class="stat-label">Выполнение</div><div class="stat-value">${wt>0?Math.round(wt/(wt+5)*100):0}%</div><div class="stat-sub" style="color:var(--green)">плана</div></div><div class="stat-card"><div class="stat-label">Привычек сегодня</div><div class="stat-value">${dh}/${data.habits.length}</div><div class="stat-sub">из ${data.habits.length}</div></div><div class="stat-card"><div class="stat-label">Активных квестов</div><div class="stat-value">${data.goals.filter(g=>g.steps.find(s=>s.active)).length}</div><div class="stat-sub">в процессе</div></div>`;
+  const days=['пн','вт','ср','чт','пт','сб','сг'],vals=[...data.taskHistory.slice(-6),dt],mx=Math.max(...vals,1);
+  document.getElementById('bar-chart').innerHTML=days.map((d,i)=>{const h=Math.round(vals[i]/mx*70),today=i===6;return`<div class="bar-col"><div class="bar" style="height:${Math.max(h,3)}px;background:${today?'var(--accent)':'var(--accent-light)'}"></div><span class="bar-lbl" style="${today?'color:var(--accent);font-weight:500':''}">${d}</span></div>`;}).join('');
+  const hg=document.getElementById('habit-grid');hg.innerHTML='';
+  data.habits.forEach(h=>{const hist=data.habitHistory[h.text]||[0,0,0,0,0,0,0];const row=document.createElement('div');row.className='habit-grid-row';row.innerHTML=`<span class="hg-label">${h.text}</span><div class="hg-dots">${hist.map((v,i)=>`<div class="hg-dot ${i===6?'today':v?'on':'off'}"></div>`).join('')}</div>`;hg.appendChild(row);});
+  document.getElementById('streak-num').textContent=data.streak;
+  document.getElementById('streak-best').textContent=`Лучшая серия: ${data.bestStreak} дней`;
+}
+
+function openAddGoal(){document.getElementById('goal-name-input').value='';document.getElementById('goal-desc-input').value='';document.getElementById('goal-cat-sel').value=data.activeGoalCat;document.getElementById('modal-goal').classList.add('open');}
+function closeModal(id){document.getElementById(id).classList.remove('open');}
+function saveGoal(){const name=document.getElementById('goal-name-input').value.trim();if(!name)return;const desc=document.getElementById('goal-desc-input').value.trim();const cat=document.getElementById('goal-cat-sel').value;data.goals.push({id:Date.now(),name,desc,cat,pct:0,steps:[{text:'Первый шаг',done:false,active:true}]});save();closeModal('modal-goal');renderGoals();}
+document.querySelectorAll('.modal-overlay').forEach(el=>el.addEventListener('click',e=>{if(e.target===el)el.classList.remove('open');}));
+function setPeriod(p,el){document.querySelectorAll('.period-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');renderProgress();}
+
+// ===== FINANCE =====
+let activeFinTab='income';
+
+function switchFinTab(tab){
+  activeFinTab=tab;
+  document.getElementById('fin-tab-income').classList.toggle('active',tab==='income');
+  document.getElementById('fin-tab-debts').classList.toggle('active',tab==='debts');
+  document.getElementById('fin-income-view').style.display=tab==='income'?'block':'none';
+  document.getElementById('fin-debts-view').style.display=tab==='debts'?'block':'none';
+  renderFinance();
+}
+
+function renderFinance(){
+  if(activeFinTab==='income') renderIncome();
+  else renderDebts();
+}
+
+// текущий просматриваемый месяц в доходах
+let incomeViewDate = new Date();
+
+function incomeMonthStep(dir){
+  incomeViewDate = new Date(incomeViewDate.getFullYear(), incomeViewDate.getMonth() + dir, 1);
+  renderIncome();
+}
+
+function renderIncome(){
+  const MONTHS_INCOME=['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
+  const vm=incomeViewDate.getMonth(), vy=incomeViewDate.getFullYear();
+  const now=new Date();
+  const isCurrentMonth=vm===now.getMonth()&&vy===now.getFullYear();
+
+  // ограничение: не раньше января 2026
+  const minDate=new Date(2026,0,1);
+  const prevDate=new Date(vy,vm-1,1);
+  const nextDate=new Date(vy,vm+1,1);
+  const canGoPrev=prevDate>=minDate;
+  const canGoNext=nextDate<=new Date(now.getFullYear(),now.getMonth(),1);
+
+  // обновляем кнопки
+  const prevBtn=document.getElementById('income-month-prev-btn');
+  const nextBtn=document.getElementById('income-month-next-btn');
+
+  document.getElementById('income-month-label').textContent=MONTHS_INCOME[vm]+' '+vy;
+
+  // стрелки — блокируем если граница
+  const prevEl=document.querySelector('#fin-income-view [onclick="incomeMonthStep(-1)"]');
+  const nextEl=document.querySelector('#fin-income-view [onclick="incomeMonthStep(1)"]');
+  if(prevEl)prevEl.style.opacity=canGoPrev?'1':'0.3';
+  if(nextEl)nextEl.style.opacity=canGoNext?'1':'0.3';
+  if(prevEl)prevEl.style.pointerEvents=canGoPrev?'auto':'none';
+  if(nextEl)nextEl.style.pointerEvents=canGoNext?'auto':'none';
+
+  const monthIncome=data.income.filter(i=>{const d=new Date(i.date);return d.getMonth()===vm&&d.getFullYear()===vy;});
+  const totalMonth=monthIncome.reduce((a,b)=>a+b.amount,0);
+  const totalAll=data.income.reduce((a,b)=>a+b.amount,0);
+
+  document.getElementById('income-summary').innerHTML=`
+    <div class="fin-sum-card"><div class="fin-sum-label">${isCurrentMonth?'За этот месяц':MONTHS_INCOME[vm]}</div><div class="fin-sum-val">${fmtMoney(totalMonth)}</div><div class="fin-sum-sub">${monthIncome.length} записей</div></div>
+    <div class="fin-sum-card"><div class="fin-sum-label">Всего за всё время</div><div class="fin-sum-val">${fmtMoney(totalAll)}</div><div class="fin-sum-sub">${data.income.length} записей</div></div>`;
+
+  const list=document.getElementById('income-list');list.innerHTML='';
+
+  if(!monthIncome.length){
+    list.innerHTML=`<div style="text-align:center;padding:24px 0;color:var(--text-hint);font-size:13px"><i class="ti ti-receipt-off" style="font-size:28px;display:block;margin-bottom:8px;opacity:.4"></i>Нет записей за этот месяц</div>`;
+    return;
+  }
+
+  const sorted=[...monthIncome].sort((a,b)=>new Date(b.date)-new Date(a.date));
+  sorted.forEach(item=>{
+    const d=document.createElement('div');d.className='income-item';
+    d.innerHTML=`<div class="income-icon"><i class="ti ti-cash"></i></div>
+      <div class="income-body"><div class="income-title">${item.title}</div><div class="income-meta">${fmtDate(item.date)}${item.note?' · '+item.note:''}</div></div>
+      <div class="income-amount">+${fmtMoney(item.amount)}</div>
+      <div class="income-del" onclick="deleteIncome(${item.id})"><i class="ti ti-x"></i></div>`;
+    list.appendChild(d);
+  });
+}
+
+function renderDebts(){
+  const rubDebts=data.debts.filter(d=>!d.currency||d.currency==='RUB');
+  const usdDebts=data.debts.filter(d=>d.currency==='USD');
+  const totalRub=rubDebts.reduce((a,b)=>a+b.total,0);
+  const paidRub=rubDebts.reduce((a,b)=>a+b.paid,0);
+  const totalUsd=usdDebts.reduce((a,b)=>a+b.total,0);
+  const paidUsd=usdDebts.reduce((a,b)=>a+b.paid,0);
+  const remainRub=totalRub-paidRub;
+  const remainUsd=totalUsd-paidUsd;
+
+  let summaryHtml=`<div class="fin-sum-card"><div class="fin-sum-label">Осталось (₽)</div><div class="fin-sum-val" style="color:var(--pink)">${fmtMoney(remainRub,'RUB')}</div><div class="fin-sum-sub">${rubDebts.length} долгов</div></div>`;
+  if(usdDebts.length){
+    summaryHtml+=`<div class="fin-sum-card"><div class="fin-sum-label">Осталось ($)</div><div class="fin-sum-val" style="color:var(--pink)">${fmtMoney(remainUsd,'USD')}</div><div class="fin-sum-sub">${usdDebts.length} долгов</div></div>`;
+  } else {
+    summaryHtml+=`<div class="fin-sum-card"><div class="fin-sum-label">Выплачено (₽)</div><div class="fin-sum-val" style="color:var(--green)">${fmtMoney(paidRub,'RUB')}</div><div class="fin-sum-sub">${totalRub?Math.round(paidRub/totalRub*100):0}%</div></div>`;
+  }
+  document.getElementById('debts-summary').innerHTML=summaryHtml;
+
+  const list=document.getElementById('debts-list');list.innerHTML='';
+  data.debts.forEach(debt=>{
+    const cur=debt.currency||'RUB';
+    const remain=Math.max(0,debt.total-debt.paid);
+    const pct=debt.total?Math.min(100,Math.round(debt.paid/debt.total*100)):0;
+    const isDone=pct>=100;
+    const curBadge=cur==='USD'?'<span style="font-size:10px;padding:2px 7px;border-radius:8px;background:#e8f4e8;color:#2a7a2a;font-weight:600;margin-left:6px">$</span>':'';
+    const d=document.createElement('div');d.className='debt-item';
+    if(isDone)d.style.opacity='0.6';
+    d.innerHTML=`<div class="debt-top">
+      <div class="debt-left">
+        <div class="debt-name">${isDone?'✅ ':''} ${debt.name}${curBadge}</div>
+        <div class="debt-meta">${debt.note||''}${debt.deadline?' · до '+fmtDate(debt.deadline):''}</div>
+      </div>
+      <div class="debt-right">
+        <div class="debt-total" style="color:${isDone?'var(--green)':'var(--pink)'}">${isDone?'Погашен':fmtMoney(remain,cur)}</div>
+        <div class="debt-remain">из ${fmtMoney(debt.total,cur)}</div>
+      </div>
+    </div>
+    <div class="debt-track"><div class="debt-fill" style="width:${pct}%;background:${isDone?'var(--green)':'var(--accent)'}"></div></div>
+    <div class="debt-foot">
+      <span class="debt-paid" style="color:${isDone?'var(--green)':'var(--green)'}">✓ ${fmtMoney(debt.paid,cur)} (${pct}%)</span>
+      <div style="display:flex;align-items:center;gap:8px">
+        ${!isDone?`<span onclick="openPayDebt(${debt.id})" style="display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:4px 10px;border-radius:20px;background:var(--green-light);color:var(--green);cursor:pointer;border:.5px solid #9fe1cb"><i class="ti ti-coin" style="font-size:12px"></i> Погасить</span>`:''}
+        <span class="debt-del" onclick="deleteDebt(${debt.id})"><i class="ti ti-x"></i></span>
+      </div>
+    </div>`;
+    list.appendChild(d);
+  });
+}
+
+function fmtMoney(n,cur){cur=cur||'RUB';return cur==='USD'?'$'+n.toLocaleString('en-US'):n.toLocaleString('ru-RU')+'₽';}
+function fmtDate(str){if(!str)return'';const d=new Date(str);return d.toLocaleDateString('ru-RU',{day:'numeric',month:'short',year:'numeric'});}
+
+function openAddIncome(){
+  document.getElementById('income-title-input').value='';
+  document.getElementById('income-amount-input').value='';
+  document.getElementById('income-date-input').value=new Date().toISOString().slice(0,10);
+  document.getElementById('income-note-input').value='';
+  document.getElementById('modal-income').classList.add('open');
+}
+function openAddDebt(){
+  document.getElementById('debt-name-input').value='';
+  document.getElementById('debt-total-input').value='';
+  document.getElementById('debt-paid-input').value='0';
+  document.getElementById('debt-date-input').value='';
+  document.getElementById('debt-note-input').value='';
+  document.getElementById('modal-debt').classList.add('open');
+}
+function saveIncome(){
+  const title=document.getElementById('income-title-input').value.trim();
+  const amount=parseFloat(document.getElementById('income-amount-input').value);
+  if(!title||!amount)return;
+  const date=document.getElementById('income-date-input').value||new Date().toISOString().slice(0,10);
+  const note=document.getElementById('income-note-input').value.trim();
+  data.income.push({id:Date.now(),title,amount,date,note});
+  save();closeModal('modal-income');renderIncome();
+}
+function saveDebt(){
+  const name=document.getElementById('debt-name-input').value.trim();
+  const total=parseFloat(document.getElementById('debt-total-input').value);
+  if(!name||!total)return;
+  const paid=parseFloat(document.getElementById('debt-paid-input').value)||0;
+  const currency=document.getElementById('debt-currency-select').value;
+  const deadline=document.getElementById('debt-date-input').value;
+  const note=document.getElementById('debt-note-input').value.trim();
+  data.debts.push({id:Date.now(),name,total,paid,currency,deadline,note});
+  save();closeModal('modal-debt');renderDebts();
+}
+function deleteIncome(id){if(confirm('Удалить запись?')){data.income=data.income.filter(i=>i.id!==id);save();renderIncome();}}
+function openPayDebt(id){
+  const debt=data.debts.find(d=>d.id===id);
+  if(!debt)return;
+  const cur=debt.currency||'RUB';
+  const remain=Math.max(0,debt.total-debt.paid);
+  document.getElementById('pay-debt-title').textContent=`Погашение: ${debt.name}`;
+  document.getElementById('pay-debt-remain').textContent=`Осталось: ${fmtMoney(remain,cur)}`;
+  document.getElementById('pay-debt-amount').value='';
+  document.getElementById('pay-debt-amount').placeholder=`Сумма (${cur==='USD'?'$':'₽'})`;
+  document.getElementById('pay-debt-id').value=id;
+  document.getElementById('modal-pay-debt').classList.add('open');
+}
+function savePayDebt(){
+  const id=parseInt(document.getElementById('pay-debt-id').value);
+  const amount=parseFloat(document.getElementById('pay-debt-amount').value);
+  if(!amount||amount<=0)return;
+  const debt=data.debts.find(d=>d.id===id);
+  if(!debt)return;
+  debt.paid=Math.min(debt.total,debt.paid+amount);
+  save();closeModal('modal-pay-debt');renderDebts();
+}
+function deleteDebt(id){if(confirm('Удалить долг?')){data.debts=data.debts.filter(d=>d.id!==id);save();renderDebts();}}
+
+function toggleDataMenu(){
+  const m=document.getElementById('data-menu');
+  m.style.display=m.style.display==='none'?'block':'none';
+}
+function exportData(){
+  const json=JSON.stringify(data,null,2);
+  const blob=new Blob([json],{type:'application/json'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');
+  a.href=url;
+  a.download='lifeapp-backup-'+new Date().toISOString().slice(0,10)+'.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+function importData(input){
+  const file=input.files[0];
+  if(!file)return;
+  const reader=new FileReader();
+  reader.onload=e=>{
+    try{
+      const parsed=JSON.parse(e.target.result);
+      if(!parsed.tasks||!parsed.habits)throw new Error('Неверный формат');
+      localStorage.setItem('lifeapp',JSON.stringify(parsed));
+      alert('Данные восстановлены! Приложение перезагрузится.');
+      location.reload();
+    }catch(err){
+      alert('Ошибка: файл повреждён или неверного формата');
+    }
+  };
+  reader.readAsText(file);
+}
+
+// ===== ARCHIVE =====
+const MONTHS_SHORT=['янв','фев','мар','апр','май','июн','июл','авг','сен','окт','ноя','дек'];
+const DAYS_FULL=['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'];
+
+function renderArchive(){
+  const archive=data.taskArchive||{};
+  const keys=Object.keys(archive).sort().reverse();
+  const list=document.getElementById('archive-list');
+  const empty=document.getElementById('archive-empty');
+  document.getElementById('archive-sub').textContent=keys.length?`${keys.length} ${keys.length===1?'день':keys.length<5?'дня':'дней'}`:'Пока нет записей';
+
+  if(!keys.length){
+    empty.style.display='block';
+    list.innerHTML='';
+    return;
+  }
+  empty.style.display='none';
+
+  // группируем по месяцам
+  const byMonth={};
+  keys.forEach(k=>{
+    const d=new Date(k+'T00:00:00');
+    const mk=d.getFullYear()+'-'+(d.getMonth()+1).toString().padStart(2,'0');
+    if(!byMonth[mk])byMonth[mk]=[];
+    byMonth[mk].push(k);
+  });
+
+  let html='';
+  Object.keys(byMonth).sort().reverse().forEach(mk=>{
+    const [year,month]=mk.split('-');
+    html+=`<div style="font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px;margin-top:4px">${MONTHS_SHORT[parseInt(month)-1]} ${year}</div>`;
+    byMonth[mk].forEach(k=>{
+      const day=archive[k];
+      const d=new Date(k+'T00:00:00');
+      const dayName=DAYS_FULL[d.getDay()];
+      const dateLabel=d.getDate()+' '+MONTHS_SHORT[d.getMonth()];
+      const total=day.tasks.length;
+      const done=day.tasks.filter(t=>t.done).length;
+      const allDone=total>0&&done===total;
+      const pct=total?Math.round(done/total*100):0;
+
+      html+=`<div style="background:var(--card);border-radius:14px;border:.5px solid var(--border);margin-bottom:8px;overflow:hidden">
+        <div onclick="toggleArchiveBlock('arch-${k}')" style="display:flex;align-items:center;gap:12px;padding:12px 14px;cursor:pointer">
+          <div style="width:44px;height:44px;border-radius:12px;background:${allDone?'var(--green-light)':'var(--accent-light)'};display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0">
+            <div style="font-size:18px;font-weight:700;color:${allDone?'var(--green)':'var(--accent)'};line-height:1">${d.getDate()}</div>
+            <div style="font-size:9px;color:${allDone?'var(--green)':'var(--accent)'};text-transform:uppercase">${MONTHS_SHORT[d.getMonth()]}</div>
+          </div>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:3px">${dayName}</div>
+            ${day.focus?`<div style="font-size:11px;color:var(--amber);margin-bottom:2px">★ ${day.focus}</div>`:''}
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="flex:1;height:4px;background:var(--border-light);border-radius:2px;overflow:hidden">
+                <div style="height:100%;width:${pct}%;background:${allDone?'var(--green)':'var(--accent)'};border-radius:2px"></div>
+              </div>
+              <span style="font-size:11px;color:${allDone?'var(--green)':'var(--text-hint)'};white-space:nowrap">${done}/${total}</span>
+            </div>
+          </div>
+          <i class="ti ti-chevron-down" id="chevron-${k}" style="font-size:16px;color:#ccc;transition:transform .2s"></i>
+        </div>
+        <div id="arch-${k}" style="display:none;border-top:.5px solid var(--border-light);padding:10px 14px">
+          ${total===0?'<div style="font-size:12px;color:var(--text-hint);text-align:center;padding:8px 0">Задач не было</div>':
+            day.tasks.map(t=>`
+              <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:.5px solid var(--border-light)">
+                <div style="width:16px;height:16px;border-radius:4px;${t.done?'background:var(--accent-light);border:1.5px solid var(--accent-mid)':'border:1.5px solid #d0d0e0'};flex-shrink:0;display:flex;align-items:center;justify-content:center">
+                  ${t.done?'<i class="ti ti-check" style="font-size:9px;color:var(--accent)"></i>':''}
+                </div>
+                <span style="font-size:12px;color:${t.done?'var(--text-hint)':'var(--text)'};${t.done?'text-decoration:line-through':''}">${t.text}</span>
+              </div>`).join('')
+          }
+        </div>
+      </div>`;
+    });
+  });
+  list.innerHTML=html;
+}
+
+function toggleArchiveBlock(id){
+  const el=document.getElementById(id);
+  const key=id.replace('arch-','');
+  const ch=document.getElementById('chevron-'+key);
+  if(!el)return;
+  const open=el.style.display==='block';
+  el.style.display=open?'none':'block';
+  if(ch)ch.style.transform=open?'':'rotate(180deg)';
+}
+
+// ===== MONTH GOALS =====
+const MONTHS_RU=['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'];
+
+function getMonthKey(){
+  const n=new Date();
+  return n.getFullYear()+'-'+(n.getMonth()+1).toString().padStart(2,'0');
+}
+
+function renderMonth(){
+  const n=new Date();
+  document.getElementById('month-title').textContent=MONTHS_RU[n.getMonth()];
+  document.getElementById('month-sub').textContent=n.getFullYear()+'  ·  Цели месяца';
+  const key=getMonthKey();
+  if(!data.monthGoals)data.monthGoals={};
+  if(!data.monthGoals[key])data.monthGoals[key]=[];
+  const goals=data.monthGoals[key];
+  const done=goals.filter(g=>g.done).length;
+  const total=goals.length;
+  const pct=total?Math.round(done/total*100):0;
+  document.getElementById('month-done-count').textContent=done+' / '+total;
+  document.getElementById('month-pct').textContent=pct+'%';
+  // circle stroke-dashoffset: 163 = full circle, 0 = complete
+  document.getElementById('month-circle').setAttribute('stroke-dashoffset', Math.round(163-(163*pct/100)));
+  const list=document.getElementById('month-goals-list');
+  list.innerHTML='';
+  goals.forEach(g=>{
+    const d=document.createElement('div');
+    d.style.cssText='display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--card);border-radius:12px;border:.5px solid var(--border);margin-bottom:6px';
+    d.innerHTML=`
+      <div onclick="toggleMonthGoal('${key}',${g.id})" style="width:20px;height:20px;border-radius:6px;border:1.5px solid ${g.done?'var(--accent-mid)':'#d0d0e0'};flex-shrink:0;display:flex;align-items:center;justify-content:center;cursor:pointer;background:${g.done?'var(--accent-light)':'transparent'}">
+        ${g.done?'<i class="ti ti-check" style="font-size:11px;color:var(--accent)"></i>':''}
+      </div>
+      <span style="font-size:13px;color:${g.done?'var(--text-hint)':'var(--text)'};flex:1;${g.done?'text-decoration:line-through':''}">${g.text}</span>
+      <span onclick="deleteMonthGoal('${key}',${g.id})" style="font-size:18px;color:#ddd;cursor:pointer;padding:2px 4px"><i class="ti ti-x"></i></span>`;
+    list.appendChild(d);
+  });
+}
+
+function quickAddMonthGoal(input){
+  const text=input.value.trim();
+  if(!text)return;
+  const key=getMonthKey();
+  if(!data.monthGoals)data.monthGoals={};
+  if(!data.monthGoals[key])data.monthGoals[key]=[];
+  data.monthGoals[key].push({id:Date.now(),text,done:false});
+  save();input.value='';renderMonth();
+  setTimeout(()=>input.focus(),50);
+}
+
+function toggleMonthGoal(key,id){
+  const g=data.monthGoals[key]&&data.monthGoals[key].find(g=>g.id===id);
+  if(g){g.done=!g.done;save();renderMonth();}
+}
+
+function deleteMonthGoal(key,id){
+  if(!data.monthGoals[key])return;
+  data.monthGoals[key]=data.monthGoals[key].filter(g=>g.id!==id);
+  save();renderMonth();
+}
+
+// ===== PROFILE =====
+function renderProfile(){
+  const p=data.profile;
+  const letter=p.emoji||p.name.charAt(0).toUpperCase()||'Т';
+  document.getElementById('profile-avatar-letter').textContent=letter;
+  document.getElementById('profile-name-display').textContent=p.name||'Твоё имя';
+  document.getElementById('profile-quote-display').textContent=p.quote||'Нажми чтобы добавить цитату...';
+  document.getElementById('profile-quote-display').style.color=p.quote?'var(--text-muted)':'var(--text-hint)';
+
+  // Обновляем все аватарки в шапках
+  document.querySelectorAll('[id="avatar-btn"]').forEach(el=>el.textContent=letter);
+
+  // Статистика
+  const totalTasks=Object.values(data.taskArchive||{}).reduce((a,d)=>a+d.tasks.filter(t=>t.done).length,0)+data.tasks.filter(t=>t.done).length;
+  const totalDays=Object.keys(data.taskArchive||{}).length+(data.tasks.length?1:0);
+  const totalIncome=data.income.reduce((a,b)=>a+b.amount,0);
+  const totalWins=data.wins.length;
+  document.getElementById('profile-stats').innerHTML=`
+    <div class="profile-stat"><div class="profile-stat-val">${totalTasks}</div><div class="profile-stat-lbl">Задач выполнено</div></div>
+    <div class="profile-stat"><div class="profile-stat-val">${totalDays}</div><div class="profile-stat-lbl">Дней в трекере</div></div>
+    <div class="profile-stat"><div class="profile-stat-val">${totalIncome.toLocaleString('ru-RU')}</div><div class="profile-stat-lbl">Заработано ₽</div></div>
+    <div class="profile-stat"><div class="profile-stat-val">${totalWins}</div><div class="profile-stat-lbl">Побед записано</div></div>`;
+
+  // Победы
+  const wl=document.getElementById('wins-list');wl.innerHTML='';
+  [...data.wins].sort((a,b)=>new Date(b.date)-new Date(a.date)).forEach(w=>{
+    const d=document.createElement('div');d.className='win-item';
+    d.innerHTML=`<span class="win-del" onclick="deleteWin(${w.id})"><i class="ti ti-x"></i></span>
+      <div class="win-title">🏆 ${w.title}</div>
+      <div class="win-date">${fmtDate(w.date)}${w.note?' · '+w.note:''}</div>`;
+    wl.appendChild(d);
+  });
+
+  // Мечты
+  const dl=document.getElementById('dreams-list');dl.innerHTML='';
+  data.dreams.forEach(dr=>{
+    const s=document.createElement('span');s.className='dream-chip';
+    s.innerHTML=`✨ ${dr.text}<span class="del" onclick="deleteDream(${dr.id})"><i class="ti ti-x"></i></span>`;
+    dl.appendChild(s);
+  });
+
+  // Ценности
+  const vl=document.getElementById('values-list');vl.innerHTML='';
+  data.values.forEach(v=>{
+    const s=document.createElement('span');s.className='value-chip';
+    s.innerHTML=`${v.text}<span class="del" onclick="deleteValue(${v.id})"><i class="ti ti-x"></i></span>`;
+    vl.appendChild(s);
+  });
+}
+
+function openEditProfile(){
+  document.getElementById('profile-name-input').value=data.profile.name||'';
+  document.getElementById('profile-emoji-input').value=data.profile.emoji||'';
+  document.getElementById('profile-quote-input').value=data.profile.quote||'';
+  document.getElementById('modal-profile').classList.add('open');
+}
+function saveProfile(){
+  data.profile.name=document.getElementById('profile-name-input').value.trim();
+  data.profile.emoji=document.getElementById('profile-emoji-input').value.trim();
+  data.profile.quote=document.getElementById('profile-quote-input').value.trim();
+  save();closeModal('modal-profile');renderProfile();
+}
+
+function openAddWin(){
+  document.getElementById('win-title-input').value='';
+  document.getElementById('win-date-input').value=new Date().toISOString().slice(0,10);
+  document.getElementById('win-note-input').value='';
+  document.getElementById('modal-win').classList.add('open');
+}
+function saveWin(){
+  const title=document.getElementById('win-title-input').value.trim();
+  if(!title)return;
+  const date=document.getElementById('win-date-input').value||new Date().toISOString().slice(0,10);
+  const note=document.getElementById('win-note-input').value.trim();
+  data.wins.push({id:Date.now(),title,date,note});
+  save();closeModal('modal-win');renderProfile();
+}
+function deleteWin(id){data.wins=data.wins.filter(w=>w.id!==id);save();renderProfile();}
+
+function addDream(){
+  const text=document.getElementById('dream-input').value.trim();
+  if(!text)return;
+  data.dreams.push({id:Date.now(),text});
+  save();document.getElementById('dream-input').value='';renderProfile();
+}
+function deleteDream(id){data.dreams=data.dreams.filter(d=>d.id!==id);save();renderProfile();}
+
+function addValue(){
+  const text=document.getElementById('value-input').value.trim();
+  if(!text)return;
+  data.values.push({id:Date.now(),text});
+  save();document.getElementById('value-input').value='';renderProfile();
+}
+function deleteValue(id){data.values=data.values.filter(v=>v.id!==id);save();renderProfile();}
+
+// Inline PWA manifest
+const manifest={name:'Жизнь — планер',short_name:'Жизнь',start_url:'.',display:'standalone',background_color:'#f7f7f9',theme_color:'#534ab7',orientation:'portrait',lang:'ru',icons:[{src:'data:image/png;base64,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',sizes:'192x192',type:'image/png',purpose:'any maskable'}]};
+const mBlob=new Blob([JSON.stringify(manifest)],{type:'application/manifest+json'});
+const mUrl=URL.createObjectURL(mBlob);
+const mLink=document.createElement('link');mLink.rel='manifest';mLink.href=mUrl;document.head.appendChild(mLink);
+
+// Inline service worker
+if('serviceWorker' in navigator){
+  const swCode=`const C='lifeapp-v1';self.addEventListener('install',e=>{self.skipWaiting();});self.addEventListener('activate',e=>{self.clients.claim();});self.addEventListener('fetch',e=>{e.respondWith(fetch(e.request).catch(()=>new Response('')));});`;
+  const swBlob=new Blob([swCode],{type:'application/javascript'});
+  const swUrl=URL.createObjectURL(swBlob);
+  navigator.serviceWorker.register(swUrl,{scope:'/'}).catch(()=>{});
+}
+
+renderToday();
+</script>
+</body>
+</html>
