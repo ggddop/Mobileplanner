@@ -8,6 +8,8 @@
 <meta name="apple-mobile-web-app-title" content="Жизнь">
 <meta name="theme-color" content="#534ab7">
 <link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="./icon-192.png">
+<link rel="shortcut icon" type="image/png" href="./icon-192.png">
 <link rel="apple-touch-icon" href="./icon-192.png">
 <title>Жизнь</title>
 <style>
@@ -257,7 +259,7 @@
  .qdot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
  .quest-name{font-size:13px;color:var(--text);flex:1}
  .quest-sub{font-size:11px;color:var(--text-hint)}
- .quest-card{background:var(--card);border-radius:14px;border:.5px solid var(--border);overflow:hidden;margin-bottom:10px}
+ .quest-card{background:var(--card);border-radius:12px;border:.5px solid var(--border);overflow:hidden;margin-bottom:10px}
  .quest-head{display:flex;align-items:center;gap:10px;padding:11px 13px;border-bottom:.5px solid var(--border-light)}
  .q-cat-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
  .q-goal-name{font-size:13px;color:var(--text-muted);flex:1}
@@ -491,20 +493,14 @@ html.rpg .qact{background:rgba(255,255,255,.04)}
 .qmain-ref{display:flex;align-items:center;gap:7px;padding:9px 12px;margin-bottom:8px;border-radius:12px;background:var(--accent-light);color:var(--accent);font-size:13px;cursor:pointer;font-weight:500}
 .qmain-ref i{font-size:13px;background-color:var(--accent);flex-shrink:0}
 html.rpg .qfolder-count{background:rgba(255,255,255,.06)}
-/* папки-блоки в строку */
-.qfolders-row{display:flex;gap:8px;overflow-x:auto;padding:14px 16px 6px;-webkit-overflow-scrolling:touch}
-.qfolders-row::-webkit-scrollbar{display:none}
-.qchip{flex-shrink:0;padding:10px 15px;border-radius:13px;background:var(--card);border:.5px solid var(--border);font-size:13px;color:var(--text-muted);cursor:pointer;font-weight:600;white-space:nowrap;display:flex;align-items:center;gap:7px;transition:all .12s}
-.qchip:active{transform:scale(.96)}
-.qchip.active{background:var(--accent);border-color:var(--accent);color:#fff}
-.qchip .qc-count{font-size:11px;font-weight:600;opacity:.65}
-.qchip.active .qc-count{opacity:.85}
-.qchip-add{color:var(--text-hint);border-style:dashed;padding:10px 13px}
-.qchip-add i{font-size:15px;background-color:var(--text-hint)}
-/* строка добавления задания */
-.quest-add-row{display:flex;align-items:center;gap:11px;padding:13px 14px;background:var(--card);border-radius:14px;border:.5px dashed var(--chip-border);margin-top:12px}
-.qadd-plus{width:22px;height:22px;border-radius:7px;border:1.5px dashed var(--chip-border);display:flex;align-items:center;justify-content:center;color:var(--text-hint);font-size:16px;flex-shrink:0;line-height:1}
-#new-quest-input{border:none;outline:none;background:transparent;font-size:15px;color:var(--text);flex:1;font-family:inherit}
+/* папки: системные пилюли tab-btn */
+.tab-btn .qc-count{font-size:11px;opacity:.6;font-weight:600;margin-left:2px}
+.tab-btn.dragging{background:var(--card);border-color:var(--border);box-shadow:0 6px 16px rgba(0,0,0,.16);position:relative;z-index:5;transition:none}
+#quest-folders-row .tab-btn{user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+/* строка добавления задания — как у задач */
+.quest-add-row{display:flex;align-items:center;gap:10px;padding:10px 12px;background:var(--card);border-radius:12px;border:.5px dashed var(--chip-border);margin-top:12px}
+.qadd-plus{width:20px;height:20px;border-radius:6px;border:1.5px solid var(--chip-border);flex-shrink:0}
+#new-quest-input{border:none;outline:none;background:transparent;font-size:13px;color:var(--text);flex:1;font-family:inherit}
 .quest-empty{text-align:center;padding:26px 16px;color:var(--text-hint);font-size:13px;line-height:1.55}
 .qfolder-actions{display:flex;justify-content:flex-end;margin-bottom:10px}
 .qfolder-actions span{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--text-hint);cursor:pointer;padding:4px 8px}
@@ -520,7 +516,7 @@ html.rpg .qfolder-count{background:rgba(255,255,255,.06)}
 <body>
 
 <!-- HOME / ГЛАВНОЕ МЕНЮ -->
-<div class="screen active" id="screen-home">
+<div class="screen" id="screen-home">
  <div class="topbar">
   <div><div class="page-title" id="home-hi">Привет, Тимур</div><div class="page-sub" id="home-date">—</div></div>
   <div class="avatar avatar-btn" onclick="goTo('profile')" style="cursor:pointer">Т</div>
@@ -530,7 +526,7 @@ html.rpg .qfolder-count{background:rgba(255,255,255,.06)}
    <div class="hero-ico"><i class="ti ti-sun"></i></div>
    <div class="home-hero-label">Сегодня</div>
    <div class="home-hero-title" id="home-hero-title">Мой день</div>
-   <div class="home-hero-sub" id="home-hero-sub">Задачи, фокус и привычки</div>
+   <div class="home-hero-sub" id="home-hero-sub">Задачи и привычки</div>
   </div>
   <div class="home-grid">
    <div class="home-card" onclick="goTo('quests')">
@@ -586,8 +582,8 @@ html.rpg .qfolder-count{background:rgba(255,255,255,.06)}
 </div>
 
 <!-- TODAY -->
-<div class="screen" id="screen-today" style="position:relative">
- <div class="topbar"><div style="display:flex;align-items:center;gap:10px"><div class="tb-back" onclick="goTo('home')"><i class="ti ti-arrow-left"></i></div><div><div class="page-title" id="wd">Понедельник</div><div class="page-sub" id="dt">11 мая 2026</div></div></div><div class="avatar avatar-btn" onclick="goTo('profile')" style="cursor:pointer">Т</div></div>
+<div class="screen active" id="screen-today" style="position:relative">
+ <div class="topbar"><div style="display:flex;align-items:center;gap:10px"><div class="tb-back" onclick="goTo('home')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></div><div><div class="page-title" id="wd">Понедельник</div><div class="page-sub" id="dt">11 мая 2026</div></div></div><div class="avatar avatar-btn" onclick="goTo('profile')" style="cursor:pointer">Т</div></div>
  <div class="scroll-area">
  <!-- Цель заработка дня -->
  <div class="section">
@@ -623,8 +619,8 @@ html.rpg .qfolder-count{background:rgba(255,255,255,.06)}
  <div class="nav-item active" onclick="goTo('today')"><i class="ti ti-sun"></i><span>День</span></div>
  <div class="nav-item" onclick="goTo('month')"><i class="ti ti-calendar-month"></i><span>Месяц</span></div>
  
+  <div class="nav-item" onclick="goTo('quests')"><i class="ti ti-map"></i><span>Задания</span></div>
  <div class="nav-item" onclick="goTo('finance')"><i class="ti ti-wallet"></i><span>Финансы</span></div>
- <div class="nav-item" onclick="goTo('quests')"><i class="ti ti-map"></i><span>Задания</span></div>
  </div>
 </div>
 
@@ -714,7 +710,7 @@ html.rpg .qfolder-count{background:rgba(255,255,255,.06)}
 
 <!-- FINANCE -->
 <div class="screen" id="screen-finance">
- <div class="topbar"><div style="display:flex;align-items:center;gap:10px"><div class="tb-back" onclick="goTo('home')"><i class="ti ti-arrow-left"></i></div><div><div class="page-title">Финансы</div></div></div><div class="avatar avatar-btn" onclick="goTo('profile')" style="cursor:pointer">Т</div></div>
+ <div class="topbar"><div style="display:flex;align-items:center;gap:10px"><div class="tb-back" onclick="goTo('home')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></div><div><div class="page-title">Финансы</div></div></div><div class="avatar avatar-btn" onclick="goTo('profile')" style="cursor:pointer">Т</div></div>
  <div class="fin-tabs">
  <div class="fin-tab active" id="fin-tab-income" onclick="switchFinTab('income')"> Заработок</div>
  <div class="fin-tab" id="fin-tab-debts" onclick="switchFinTab('debts')"> Долги</div>
@@ -795,15 +791,15 @@ html.rpg .qfolder-count{background:rgba(255,255,255,.06)}
  <div class="nav-item" onclick="goTo('today')"><i class="ti ti-sun"></i><span>День</span></div>
  <div class="nav-item" onclick="goTo('month')"><i class="ti ti-calendar-month"></i><span>Месяц</span></div>
  
+  <div class="nav-item" onclick="goTo('quests')"><i class="ti ti-map"></i><span>Задания</span></div>
  <div class="nav-item active" onclick="goTo('finance')"><i class="ti ti-wallet"></i><span>Финансы</span></div>
- <div class="nav-item" onclick="goTo('quests')"><i class="ti ti-map"></i><span>Задания</span></div>
  </div>
 </div>
 
 <!-- MONTH -->
 <div class="screen" id="screen-month">
  <div class="topbar">
- <div style="display:flex;align-items:center;gap:10px"><div class="tb-back" onclick="goTo('home')"><i class="ti ti-arrow-left"></i></div><div><div class="page-title">Месяц</div><div class="page-sub" id="month-sub">Цели и календарь</div></div></div>
+ <div style="display:flex;align-items:center;gap:10px"><div class="tb-back" onclick="goTo('home')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></div><div><div class="page-title">Месяц</div><div class="page-sub" id="month-sub">Цели и календарь</div></div></div>
  <div class="avatar avatar-btn" onclick="goTo('profile')" style="cursor:pointer">Т</div>
  </div>
  <div class="scroll-area">
@@ -865,8 +861,8 @@ html.rpg .qfolder-count{background:rgba(255,255,255,.06)}
  <div class="nav-item" onclick="goTo('today')"><i class="ti ti-sun"></i><span>День</span></div>
  <div class="nav-item active" onclick="goTo('month')"><i class="ti ti-calendar-month"></i><span>Месяц</span></div>
  
+  <div class="nav-item" onclick="goTo('quests')"><i class="ti ti-map"></i><span>Задания</span></div>
  <div class="nav-item" onclick="goTo('finance')"><i class="ti ti-wallet"></i><span>Финансы</span></div>
- <div class="nav-item" onclick="goTo('quests')"><i class="ti ti-map"></i><span>Задания</span></div>
  </div>
 </div>
 
@@ -1244,7 +1240,7 @@ html.rpg .qfolder-count{background:rgba(255,255,255,.06)}
 <!-- QUESTS / ЗАДАНИЯ -->
 <div class="screen" id="screen-quests">
  <div class="topbar">
-  <div style="display:flex;align-items:center;gap:10px"><div class="tb-back" onclick="goTo('home')"><i class="ti ti-arrow-left"></i></div><div><div class="page-title">Задания</div><div class="page-sub" id="quests-sub">0 активных</div></div></div>
+  <div style="display:flex;align-items:center;gap:10px"><div class="tb-back" onclick="goTo('home')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></div><div><div class="page-title">Задания</div><div class="page-sub" id="quests-sub">0 активных</div></div></div>
   <div class="avatar avatar-btn" onclick="goTo('profile')" style="cursor:pointer">Т</div>
  </div>
  <div class="scroll-area">
@@ -1252,11 +1248,11 @@ html.rpg .qfolder-count{background:rgba(255,255,255,.06)}
    <div class="section-title">Главное задание</div>
    <div id="quest-main"></div>
   </div>
-  <div id="quest-folders-row" class="qfolders-row"></div>
+  <div id="quest-folders-row" class="tabs-bar" style="padding-top:12px"></div>
   <div class="section" style="padding-top:2px">
    <div id="quest-active-list"></div>
    <div class="quest-add-row">
-    <div class="qadd-plus">+</div>
+    <div class="qadd-plus"></div>
     <input id="new-quest-input" placeholder="Новое задание..." enterkeyhint="done" onkeydown="if(event.key==='Enter'){event.preventDefault();quickAddQuest(this);}">
    </div>
   </div>
@@ -1269,8 +1265,8 @@ html.rpg .qfolder-count{background:rgba(255,255,255,.06)}
  <div class="nav-item" onclick="goTo('today')"><i class="ti ti-sun"></i><span>День</span></div>
  <div class="nav-item" onclick="goTo('month')"><i class="ti ti-calendar-month"></i><span>Месяц</span></div>
  
+  <div class="nav-item active" onclick="goTo('quests')"><i class="ti ti-map"></i><span>Задания</span></div>
  <div class="nav-item" onclick="goTo('finance')"><i class="ti ti-wallet"></i><span>Финансы</span></div>
- <div class="nav-item active" onclick="goTo('quests')"><i class="ti ti-map"></i><span>Задания</span></div>
  </div>
 </div>
 
@@ -1469,7 +1465,7 @@ html.rpg .qfolder-count{background:rgba(255,255,255,.06)}
 </div>
 
 <script>
-const APP_VERSION='5.1 · новая иконка'; // видно в профиле — для проверки, что открыта свежая версия
+const APP_VERSION='5.9 · drag папок (фикс тача)' // видно в профиле — для проверки, что открыта свежая версия
 const SALARY_RATE=0.1; // доля от выручки — менять только здесь
 let monthDoneOpen=false; // свёрнут ли блок выполненных целей месяца
 let goalsDoneOpen=false; // свёрнут ли блок достигнутых целей
@@ -1723,7 +1719,7 @@ function renderHome(){
  const tasks=(data.tasks||[]);
  const done=tasks.filter(t=>t.done).length;
  const sub=document.getElementById('home-hero-sub');
- if(sub)sub.textContent=tasks.length?(done+' из '+tasks.length+' задач сделано'):'Задачи, фокус и привычки';
+ if(sub)sub.textContent=tasks.length?(done+' из '+tasks.length+' задач сделано'):'Задачи и привычки';
  const ht=document.getElementById('home-hero-title');
  if(ht)ht.textContent=(data.focusDay&&data.focusDay.trim())?data.focusDay.trim():'Мой день';
 }
@@ -1735,7 +1731,7 @@ function openShifts(){
 }
 
 function tick(){checkDayRollover();}
-injectPlannedTasks();applyTheme();applyRpg();renderHome();
+injectPlannedTasks();applyTheme();applyRpg();
 const _v=document.getElementById('app-version');if(_v)_v.textContent='Планер · v'+APP_VERSION;
 if(window.matchMedia){try{window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',applyTheme);}catch(e){}}
 setInterval(tick,10000);tick();
@@ -2174,7 +2170,7 @@ let folderOpen={}; // (устар.) оставлено для совместим
 let questFilter='all'; // 'all' | id папки | 'none'
 function isFolderOpen(key){return folderOpen[key]!==false;}
 function toggleFolder(key){folderOpen[key]=!isFolderOpen(key);renderQuests();}
-function selectQuestFilter(f){questFilter=f;renderQuests();}
+function selectQuestFilter(f){if(Date.now()-chipDragJust<400)return;questFilter=f;renderQuests();}
 
 function renderQuests(){
   const quests=data.quests||[];
@@ -2229,16 +2225,87 @@ function renderQuests(){
 function renderQuestChips(folders,rest){
   const row=document.getElementById('quest-folders-row');
   if(!row)return;
-  const chip=(id,name,count,on)=>{
-    const val=(id==='all'||id==='none')?("'"+id+"'"):id;
-    return '<div class="qchip'+(on?' active':'')+'" onclick="selectQuestFilter('+val+')">'+esc(name)+(count?'<span class="qc-count">'+count+'</span>':'')+'</div>';
+  const btn=(val,name,count,on,fid)=>{
+    const v=(val==='all'||val==='none')?("'"+val+"'"):val;
+    return '<div class="tab-btn'+(on?' active':'')+'"'+(fid!=null?' data-fid="'+fid+'"':'')+' onclick="selectQuestFilter('+v+')">'+esc(name)+(count?'<span class="qc-count">'+count+'</span>':'')+'</div>';
   };
-  let h=chip('all','Все',rest.length,questFilter==='all');
-  folders.forEach(f=>{h+=chip(f.id,f.name,rest.filter(q=>q.folder===f.id).length,questFilter===f.id);});
+  let h=btn('all','Все',rest.length,questFilter==='all',null);
+  folders.forEach(f=>{h+=btn(f.id,f.name,rest.filter(q=>q.folder===f.id).length,questFilter===f.id,f.id);});
   const noneCount=rest.filter(q=>q.folder==null||!folders.some(f=>f.id===q.folder)).length;
-  if(noneCount)h+=chip('none','Без папки',noneCount,questFilter==='none');
-  h+='<div class="qchip qchip-add" onclick="openAddFolder()"><i class="ti ti-plus"></i></div>';
+  if(noneCount)h+=btn('none','Без папки',noneCount,questFilter==='none',null);
+  h+='<div class="tab-btn" onclick="openAddFolder()" style="padding:7px 11px"><i class="ti ti-plus" style="font-size:14px"></i></div>';
   row.innerHTML=h;
+  initChipDrag();
+}
+
+// ---- перетаскивание папок (долгое нажатие) ----
+let chipDrag=null,chipDragJust=0;
+function initChipDrag(){
+  const row=document.getElementById('quest-folders-row');
+  if(!row)return;
+  row.querySelectorAll('.tab-btn[data-fid]').forEach(ch=>{
+    ch.addEventListener('touchstart',chipDown,{passive:true});
+    ch.addEventListener('mousedown',chipDown);
+    ch.oncontextmenu=function(e){e.preventDefault();return false;};
+  });
+}
+function chipDown(e){
+  const el=e.currentTarget;
+  const pt=e.touches?e.touches[0]:e;
+  const isTouch=!!e.touches;
+  chipDrag={el,isTouch,x:pt.clientX,y:pt.clientY,active:false,
+    timer:setTimeout(()=>{if(chipDrag){chipDrag.active=true;el.classList.add('dragging');if(navigator.vibrate){try{navigator.vibrate(15)}catch(_){}}}},330)};
+  document.addEventListener(isTouch?'touchmove':'mousemove',chipMove,{passive:false});
+  document.addEventListener(isTouch?'touchend':'mouseup',chipUp);
+  if(isTouch)document.addEventListener('touchcancel',chipUp);
+}
+function chipMove(e){
+  if(!chipDrag)return;
+  const pt=e.touches?e.touches[0]:e;
+  const dx=pt.clientX-chipDrag.x, dy=pt.clientY-chipDrag.y;
+  if(!chipDrag.active){
+    if(Math.abs(dx)>8||Math.abs(dy)>8){clearTimeout(chipDrag.timer);chipCleanup();}
+    return;
+  }
+  e.preventDefault();
+  const el=chipDrag.el;
+  let moved=true;
+  while(moved){
+    moved=false;
+    const next=el.nextElementSibling, prev=el.previousElementSibling;
+    if(next&&next.hasAttribute('data-fid')){
+      const nr=next.getBoundingClientRect();
+      if(pt.clientX>nr.left+nr.width/2){next.after(el);chipDrag.x+=nr.width+6;moved=true;continue;}
+    }
+    if(prev&&prev.hasAttribute('data-fid')){
+      const pr=prev.getBoundingClientRect();
+      if(pt.clientX<pr.left+pr.width/2){prev.before(el);chipDrag.x-=pr.width+6;moved=true;continue;}
+    }
+  }
+  el.style.transform='translateX('+(pt.clientX-chipDrag.x)+'px)';
+}
+function chipUp(){
+  if(!chipDrag)return;
+  clearTimeout(chipDrag.timer);
+  const wasActive=chipDrag.active;
+  if(wasActive){
+    chipDragJust=Date.now();
+    const row=document.getElementById('quest-folders-row');
+    const order=[...row.querySelectorAll('.tab-btn[data-fid]')].map(c=>Number(c.dataset.fid));
+    (data.folders||[]).sort((a,b)=>order.indexOf(a.id)-order.indexOf(b.id));
+    save();
+    chipDrag.el.classList.remove('dragging');chipDrag.el.style.transform='';
+  }
+  chipCleanup();
+  if(wasActive)renderQuests();
+}
+function chipCleanup(){
+  document.removeEventListener('touchmove',chipMove);
+  document.removeEventListener('mousemove',chipMove);
+  document.removeEventListener('touchend',chipUp);
+  document.removeEventListener('touchcancel',chipUp);
+  document.removeEventListener('mouseup',chipUp);
+  chipDrag=null;
 }
 
 function quickAddQuest(input){
